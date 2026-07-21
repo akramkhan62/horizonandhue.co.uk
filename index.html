@@ -30,16 +30,12 @@ body{
   line-height:1.7;
   -webkit-font-smoothing:antialiased;
 }
-
-/* ── HORIZON RULE ─────────────────────────────── */
 .h-rule{
   width:100%;
   height:1px;
   background:var(--gold);
   opacity:.35;
 }
-
-/* ── NAV ──────────────────────────────────────── */
 nav{
   position:fixed;
   top:0;left:0;right:0;
@@ -77,8 +73,6 @@ nav{
   transition:color .2s;
 }
 .nav-links a:hover{color:var(--gold)}
-
-/* ── HERO ─────────────────────────────────────── */
 #hero{
   min-height:100vh;
   display:flex;
@@ -178,8 +172,6 @@ nav{
   color:rgba(245,239,230,.25);
   writing-mode:vertical-rl;
 }
-
-/* ── SECTIONS COMMON ──────────────────────────── */
 section{padding:6rem 5vw}
 .section-eyebrow{
   font-family:'Jost',sans-serif;
@@ -209,8 +201,6 @@ section{padding:6rem 5vw}
   line-height:1.8;
   max-width:65ch;
 }
-
-/* ── STORY ────────────────────────────────────── */
 #story{background:var(--light)}
 .story-grid{
   display:grid;
@@ -253,8 +243,6 @@ section{padding:6rem 5vw}
   border:1px solid rgba(201,151,76,.3);
   color:var(--gold);
 }
-
-/* ── LOCALE CATEGORIES ────────────────────────── */
 #locales{background:var(--cream)}
 .locales-intro{
   max-width:1200px;
@@ -306,8 +294,6 @@ section{padding:6rem 5vw}
   color:var(--grey);
   line-height:1.7;
 }
-
-/* ── HOW IT WORKS ─────────────────────────────── */
 #method{background:var(--ink);color:var(--cream)}
 #method .section-eyebrow{color:var(--gold)}
 #method .section-title{color:var(--cream)}
@@ -361,8 +347,6 @@ section{padding:6rem 5vw}
   color:rgba(245,239,230,.6);
   line-height:1.7;
 }
-
-/* ── SERVICES ─────────────────────────────────── */
 #services{background:var(--light)}
 .services-grid{
   display:grid;
@@ -433,8 +417,6 @@ section{padding:6rem 5vw}
   color:var(--gold);
   font-style:italic;
 }
-
-/* ── ABOUT ────────────────────────────────────── */
 #about{background:var(--mist)}
 .about-grid{
   display:grid;
@@ -467,8 +449,6 @@ section{padding:6rem 5vw}
   letter-spacing:.5px;
   color:var(--charcoal);
 }
-
-/* ── CONTACT ──────────────────────────────────── */
 #contact{
   background:var(--ink);
   color:var(--cream);
@@ -506,8 +486,6 @@ section{padding:6rem 5vw}
   text-decoration:none;
 }
 .contact-detail a:hover{color:var(--gold)}
-
-/* ── FOOTER ───────────────────────────────────── */
 footer{
   background:var(--ink);
   border-top:1px solid rgba(201,151,76,.15);
@@ -531,8 +509,6 @@ footer{
   color:rgba(245,239,230,.2);
   text-align:right;
 }
-
-/* ── TAGLINE BAR ──────────────────────────────── */
 .tagline-bar{
   background:var(--gold);
   padding:.6rem 5vw;
@@ -544,8 +520,6 @@ footer{
   color:var(--ink);
   text-align:center;
 }
-
-/* ── BOOKING FORM ─────────────────────────────── */
 .booking-form{
   margin-top:1.5rem;
   border-top:1px solid rgba(201,151,76,.2);
@@ -571,9 +545,7 @@ footer{
   flex-direction:column;
   gap:.35rem;
 }
-.form-field.full{
-  grid-column:1/-1;
-}
+.form-field.full{grid-column:1/-1;}
 .form-field label{
   font-family:'Jost',sans-serif;
   font-size:.62rem;
@@ -599,9 +571,7 @@ footer{
 }
 .form-field input:focus,
 .form-field select:focus,
-.form-field textarea:focus{
-  border-color:var(--gold);
-}
+.form-field textarea:focus{border-color:var(--gold);}
 .form-field textarea{
   resize:vertical;
   min-height:80px;
@@ -665,7 +635,6 @@ footer{
 </head>
 <body>
 
-<!-- ── NAV ──────────────────────────────────── -->
 <nav>
   <div class="nav-brand">Horizon <em>&</em> Hue</div>
   <ul class="nav-links">
@@ -677,12 +646,11 @@ footer{
   </ul>
 </nav>
 
-<!-- ── HERO ─────────────────────────────────── -->
 <section id="hero" style="position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;z-index:0;">
-    <img src="hero.jpg"
+    <img src="https://raw.githubusercontent.com/akramkhan62/horizonandhue.co.uk/main/hero.jpg"
          alt="Pale teal stucco building facing park canopy — Primrose Hill NW1"
-         style="width:100%;height:100%;object-fit:cover;object-position:center center;opacity:0.22;">
+         style="width:100%;height:100%;object-fit:cover;object-position:center center;opacity:0.35;">
     <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,22,20,0.92) 0%,rgba(26,22,20,0.75) 60%,rgba(26,22,20,0.55) 100%);"></div>
   </div>
   <div style="position:relative;z-index:1;">
@@ -705,10 +673,8 @@ footer{
   </div>
 </section>
 
-<!-- ── TAGLINE BAR ────────────────────────────── -->
 <div class="tagline-bar">Decor designed to ground the body and lift the spirit</div>
 
-<!-- ── STORY ─────────────────────────────────── -->
 <div class="h-rule"></div>
 <section id="story">
   <div class="story-grid">
@@ -736,7 +702,6 @@ footer{
   </div>
 </section>
 
-<!-- ── LOCALE CATEGORIES ──────────────────────── -->
 <div class="h-rule"></div>
 <section id="locales">
   <div class="locales-intro">
@@ -814,7 +779,6 @@ footer{
   </div>
 </section>
 
-<!-- ── METHOD ─────────────────────────────────── -->
 <div class="h-rule"></div>
 <section id="method">
   <div class="section-eyebrow">How it works · six steps</div>
@@ -854,7 +818,6 @@ footer{
   </div>
 </section>
 
-<!-- ── SERVICES ───────────────────────────────── -->
 <div class="h-rule"></div>
 <section id="services">
   <div class="section-eyebrow">How to begin</div>
@@ -868,11 +831,7 @@ footer{
       <p class="service-desc">You walk me through your home using your phone or laptop camera. I give an initial impression of what The Locale contains — view or vibe — and what the room could become. No preparation needed. I send you a Google Meet link once we've agreed a time.</p>
       <div class="booking-form" id="firstlook">
         <div class="booking-form-title">Request your First Look</div>
-        <form
-          action="https://formspree.io/f/xnjejapz"
-          method="POST"
-          id="firstlook-form"
-          onsubmit="handleSubmit(event)">
+        <form action="https://formspree.io/f/xnjejapz" method="POST" id="firstlook-form" onsubmit="handleSubmit(event)">
           <input type="hidden" name="_subject" value="New First Look Request — Horizon & Hue">
           <input type="hidden" name="_replyto" value="hello@horizonandhue.co.uk">
           <div class="form-row">
@@ -943,12 +902,11 @@ footer{
   <p style="font-family:'Jost',sans-serif;font-size:.75rem;letter-spacing:.5px;color:var(--grey);margin-top:2rem;max-width:1200px;">Decoration from £600 per room · Whole home from £1,800 · Suite RA01, 195–197 Wood Street, London E17 3NU</p>
 </section>
 
-<!-- ── ABOUT ───────────────────────────────────── -->
 <div class="h-rule"></div>
 <section id="about">
   <div class="about-grid">
     <div style="position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--ink);">
-      <img src="portrait.jpg"
+      <img src="https://raw.githubusercontent.com/akramkhan62/horizonandhue.co.uk/main/portrait.jpg"
            alt="Akram Khan — Horizon & Hue, View & Vibe Led Decorator, London E17"
            style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
       <div style="position:absolute;bottom:0;left:0;right:0;padding:1.25rem 1.5rem;background:linear-gradient(transparent,rgba(26,22,20,.85));">
@@ -990,7 +948,6 @@ footer{
   </div>
 </section>
 
-<!-- ── CONTACT ────────────────────────────────── -->
 <div class="h-rule"></div>
 <section id="contact">
   <div class="section-eyebrow" style="text-align:center;color:var(--gold)">Get in touch</div>
@@ -1007,7 +964,6 @@ footer{
   </p>
 </section>
 
-<!-- ── FOOTER ─────────────────────────────────── -->
 <div class="h-rule"></div>
 <footer>
   <div class="footer-brand">Horizon <em>&</em> Hue</div>
