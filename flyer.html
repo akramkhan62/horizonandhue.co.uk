@@ -3,304 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horizon & Hue · View & Vibe Led Decorator · London</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<title>Horizon & Hue · Flyer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --ink:#1A1614;
-  --gold:#C9974C;
-  --cream:#F5EFE6;
-  --terra:#C07050;
-  --teal:#1A7A8A;
-  --mist:#EDE7DC;
-  --charcoal:#3D3530;
-  --grey:#5A5250;
-  --light:#F9F5F0;
-}
-@media print{
-  body{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-  .no-print{display:none}
-}
-body{
-  font-family:'Jost',sans-serif;
-  background:var(--cream);
-  color:var(--ink);
-  font-size:16px;
-  line-height:1.7;
-  -webkit-font-smoothing:antialiased;
-  max-width:794px;
-  margin:0 auto;
-}
-
-/* ── COLOUR BAND ─── */
-.colour-band{
-  height:4px;
-  display:flex;
-  width:100%;
-}
-.colour-band div{flex:1}
-
-/* ── HEADER ─── */
-.flyer-header{
-  background:var(--ink);
-  padding:2.5rem 3rem 2rem;
-  position:relative;
-}
-.header-inner{
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:2rem;
-  align-items:center;
-}
-.brand-name{
-  font-family:'Cormorant Garamond',serif;
-  font-size:3rem;
-  font-weight:300;
-  color:var(--cream);
-  line-height:1;
-  margin-bottom:.4rem;
-}
-.brand-name em{color:var(--gold);font-style:normal}
-.brand-descriptor{
-  font-family:'Jost',sans-serif;
-  font-size:.75rem;
-  font-weight:500;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:1rem;
-}
-.brand-headline{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.5rem;
-  font-weight:300;
-  font-style:italic;
-  color:var(--cream);
-  line-height:1.3;
-  max-width:38ch;
-}
-.brand-headline em{color:var(--gold);font-style:italic}
-.portrait-wrap{
-  width:110px;
-  height:130px;
-  overflow:hidden;
-  flex-shrink:0;
-  border:2px solid rgba(201,151,76,.5);
-}
-.portrait-wrap img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center top;
-  display:block;
-}
-
-/* ── TAGLINE BAR ─── */
-.tagline-bar{
-  background:var(--gold);
-  padding:.6rem 3rem;
-  font-family:'Jost',sans-serif;
-  font-size:.72rem;
-  font-weight:500;
-  letter-spacing:2.5px;
-  text-transform:uppercase;
-  color:var(--ink);
-}
-
-/* ── BODY ─── */
-.flyer-body{
-  padding:2rem 3rem;
-  background:var(--cream);
-}
-
-/* ── INTRO ─── */
-.intro-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:2rem;
-  margin-bottom:2rem;
-  padding-bottom:2rem;
-  border-bottom:1px solid rgba(201,151,76,.3);
-}
-.intro-pull{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.25rem;
-  font-weight:300;
-  font-style:italic;
-  color:var(--ink);
-  line-height:1.5;
-  border-left:2px solid var(--gold);
-  padding-left:1.25rem;
-}
-.intro-body{
-  font-family:'EB Garamond',serif;
-  font-size:1rem;
-  color:var(--charcoal);
-  line-height:1.8;
-}
-
-/* ── LOCALE SECTION ─── */
-.locale-heading{
-  font-family:'Jost',sans-serif;
-  font-size:.72rem;
-  font-weight:600;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:1rem;
-}
-.locale-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1px;
-  background:rgba(201,151,76,.2);
-  margin-bottom:2rem;
-}
-.locale-card{
-  background:var(--cream);
-  padding:1rem .85rem;
-}
-.locale-swatches{
-  display:flex;
-  gap:.3rem;
-  margin-bottom:.5rem;
-}
-.locale-swatch{
-  width:14px;height:14px;
-  border-radius:2px;
-}
-.locale-name{
-  font-family:'Jost',sans-serif;
-  font-size:.68rem;
-  font-weight:600;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  color:var(--ink);
-  margin-bottom:.25rem;
-}
-.locale-thread{
-  font-family:'Jost',sans-serif;
-  font-size:.63rem;
-  letter-spacing:.5px;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:.35rem;
-}
-.locale-desc{
-  font-family:'EB Garamond',serif;
-  font-size:.88rem;
-  color:var(--charcoal);
-  line-height:1.6;
-}
-
-/* ── SERVICES ─── */
-.services-row{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1rem;
-  margin-bottom:2rem;
-  padding-bottom:2rem;
-  border-bottom:1px solid rgba(201,151,76,.3);
-}
-.service-item{
-  padding:1rem;
-  border:1px solid rgba(201,151,76,.3);
-  background:var(--light);
-}
-.service-item.featured{
-  background:var(--ink);
-  border-color:var(--gold);
-}
-.service-price{
-  font-family:'Cormorant Garamond',serif;
-  font-size:2rem;
-  font-weight:300;
-  color:var(--gold);
-  line-height:1;
-  margin-bottom:.2rem;
-}
-.service-label{
-  font-family:'Jost',sans-serif;
-  font-size:.65rem;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  color:var(--grey);
-  margin-bottom:.5rem;
-}
-.service-item.featured .service-label{color:rgba(245,239,230,.75)}
-.service-name{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.05rem;
-  font-weight:400;
-  color:var(--ink);
-  margin-bottom:.4rem;
-}
-.service-item.featured .service-name{color:var(--cream)}
-.service-desc{
-  font-family:'EB Garamond',serif;
-  font-size:.88rem;
-  color:var(--charcoal);
-  line-height:1.6;
-}
-.service-item.featured .service-desc{color:rgba(245,239,230,.9)}
-.service-credit{
-  font-family:'Jost',sans-serif;
-  font-size:.63rem;
-  letter-spacing:.5px;
-  color:var(--gold);
-  font-style:italic;
-  margin-top:.4rem;
-}
-
-/* ── WELCOME LINE ─── */
-.welcome-line{
-  font-family:'EB Garamond',serif;
-  font-size:1rem;
-  font-style:italic;
-  color:var(--charcoal);
-  line-height:1.8;
-  text-align:center;
-  margin-bottom:2rem;
-  padding:1rem 2rem;
-  border-top:1px solid rgba(201,151,76,.3);
-  border-bottom:1px solid rgba(201,151,76,.3);
-}
-
-/* ── FOOTER ─── */
-.flyer-footer{
-  background:var(--ink);
-  padding:1.5rem 3rem;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:2rem;
-  align-items:center;
-}
-.footer-brand{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.1rem;
-  color:var(--cream);
-}
-.footer-brand em{color:var(--gold);font-style:normal}
-.footer-contact{
-  font-family:'Jost',sans-serif;
-  font-size:.7rem;
-  letter-spacing:.5px;
-  color:rgba(245,239,230,.9);
-  line-height:2;
-  text-align:right;
-}
-.footer-contact a{
-  color:rgba(245,239,230,.9);
-  text-decoration:none;
-}
+body{font-family:'Jost',sans-serif;background:#F5EFE6;color:#1A1614;max-width:794px;margin:0 auto;}
+@media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+.band{height:4px;display:flex;}
+.band div{flex:1}
+.header{background:#1A1614;padding:2rem 2.5rem;}
+.header-grid{display:grid;grid-template-columns:1fr 120px;gap:1.5rem;align-items:center;}
+.brand{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:#F5EFE6;line-height:1;margin-bottom:.3rem;}
+.brand span{color:#C9974C;}
+.descriptor{font-family:'Jost',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#C9974C;margin-bottom:.8rem;}
+.headline{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;font-style:italic;color:#F5EFE6;line-height:1.3;}
+.headline span{color:#C9974C;}
+.portrait{width:120px;height:140px;overflow:hidden;border:2px solid rgba(201,151,76,.4);}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+.tagline{background:#C9974C;padding:.55rem 2.5rem;font-family:'Jost',sans-serif;font-size:.7rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#1A1614;}
+.body{padding:1.75rem 2.5rem;background:#F5EFE6;}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(201,151,76,.25);}
+.pull{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:300;font-style:italic;color:#1A1614;line-height:1.5;border-left:2px solid #C9974C;padding-left:1rem;}
+.intro-text{font-family:'EB Garamond',serif;font-size:.95rem;color:#3D3530;line-height:1.8;}
+.section-label{font-family:'Jost',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#C9974C;margin-bottom:.85rem;}
+.locale-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,151,76,.2);margin-bottom:1.75rem;}
+.lc{background:#F5EFE6;padding:.85rem .75rem;}
+.swatches{display:flex;gap:.25rem;margin-bottom:.4rem;}
+.sw{width:12px;height:12px;border-radius:2px;}
+.lc-name{font-family:'Jost',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#1A1614;margin-bottom:.2rem;}
+.lc-thread{font-family:'Jost',sans-serif;font-size:.6rem;letter-spacing:.5px;text-transform:uppercase;color:#C9974C;margin-bottom:.3rem;}
+.lc-desc{font-family:'EB Garamond',serif;font-size:.85rem;color:#3D3530;line-height:1.55;}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:.85rem;margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(201,151,76,.25);}
+.sv{padding:.85rem;border:1px solid rgba(201,151,76,.25);background:#F9F5F0;}
+.sv.feat{background:#1A1614;border-color:#C9974C;}
+.sv-price{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:300;color:#C9974C;line-height:1;margin-bottom:.15rem;}
+.sv-label{font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.8px;text-transform:uppercase;color:#7A726A;margin-bottom:.4rem;}
+.sv.feat .sv-label{color:rgba(245,239,230,.7);}
+.sv-name{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;color:#1A1614;margin-bottom:.35rem;}
+.sv.feat .sv-name{color:#F5EFE6;}
+.sv-desc{font-family:'EB Garamond',serif;font-size:.85rem;color:#3D3530;line-height:1.6;}
+.sv.feat .sv-desc{color:rgba(245,239,230,.85);}
+.sv-credit{font-family:'Jost',sans-serif;font-size:.6rem;color:#C9974C;font-style:italic;margin-top:.35rem;}
+.welcome{font-family:'EB Garamond',serif;font-size:.95rem;font-style:italic;color:#3D3530;line-height:1.8;text-align:center;padding:.85rem 1.5rem;border-top:1px solid rgba(201,151,76,.25);border-bottom:1px solid rgba(201,151,76,.25);}
+.footer{background:#1A1614;padding:1.25rem 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center;}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#F5EFE6;}
+.footer-brand span{color:#C9974C;}
+.footer-contact{font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:.4px;color:rgba(245,239,230,.85);line-height:2;text-align:right;}
+.footer-contact a{color:rgba(245,239,230,.85);text-decoration:none;}
 </style>
 </head>
 <body>
 
-<!-- COLOUR BAND -->
-<div class="colour-band">
+<div class="band">
   <div style="background:#C9974C"></div>
   <div style="background:#C83A70"></div>
   <div style="background:#2D5A3D"></div>
@@ -308,147 +62,137 @@ body{
   <div style="background:#C07050"></div>
 </div>
 
-<!-- HEADER -->
-<div class="flyer-header">
-  <div class="header-inner">
+<div class="header">
+  <div class="header-grid">
     <div>
-      <div class="brand-name">Horizon <em>&</em> Hue</div>
-      <div class="brand-descriptor">View & Vibe Led Decorator · London E17</div>
-      <div class="brand-headline">Colour drawn from your <em>view.</em><br>And the vibe of your <em>street.</em></div>
+      <div class="brand">Horizon <span>&</span> Hue</div>
+      <div class="descriptor">View & Vibe Led Decorator · London E17</div>
+      <div class="headline">Colour drawn from your <span>view.</span><br>And the vibe of your <span>street.</span></div>
     </div>
-    <div class="portrait-wrap">
-      <img src="https://i.ibb.co/mCSTY3fY/9548-EDIT.jpg"
-           alt="Akram Khan · Horizon & Hue">
+    <div class="portrait">
+      <img src="https://i.ibb.co/mCSTY3fY/9548-EDIT.jpg" alt="Akram Khan">
     </div>
   </div>
 </div>
 
-<!-- TAGLINE BAR -->
-<div class="tagline-bar">Decor designed to ground the body and lift the spirit</div>
+<div class="tagline">Decor designed to ground the body and lift the spirit</div>
 
-<!-- BODY -->
-<div class="flyer-body">
+<div class="body">
 
-  <!-- INTRO -->
   <div class="intro-grid">
-    <div class="intro-pull">"The Horizon was always there. The Hue was always here. Every room has a Locale. Every Locale has a colour."</div>
-    <div class="intro-body">The park outside your window. The market on your corner. The canal two streets away. Every home has a Locale — a view or a vibe that sets the colour brief. Horizon & Hue reads it and brings it inside. Specialist decorator, East London and beyond.</div>
+    <div class="pull">"The Horizon was always there. The Hue was always here. Every room has a Locale. Every Locale has a colour."</div>
+    <div class="intro-text">The park outside your window. The market on your corner. The canal two streets away. Every home has a Locale — a view or a vibe that sets the colour brief. Horizon & Hue reads it and brings it inside. Specialist decorator, East London and beyond.</div>
   </div>
 
-  <!-- LOCALE -->
-  <div class="locale-heading">The Locale — six qualifying views</div>
+  <div class="section-label">The Locale — six qualifying views</div>
   <div class="locale-grid">
-    <div class="locale-card">
-      <div class="locale-swatches">
-        <div class="locale-swatch" style="background:#2D5A3D"></div>
-        <div class="locale-swatch" style="background:#8FBA6A"></div>
-        <div class="locale-swatch" style="background:#C9974C"></div>
-        <div class="locale-swatch" style="background:#E8E0D0"></div>
+    <div class="lc">
+      <div class="swatches">
+        <div class="sw" style="background:#2D5A3D"></div>
+        <div class="sw" style="background:#8FBA6A"></div>
+        <div class="sw" style="background:#C9974C"></div>
+        <div class="sw" style="background:#E8E0D0"></div>
       </div>
-      <div class="locale-name">Parks & Gardens</div>
-      <div class="locale-thread">Green Thread leads</div>
-      <p class="locale-desc">Lloyd Park. Victoria Park. Clissold Park.</p>
+      <div class="lc-name">Parks & Gardens</div>
+      <div class="lc-thread">Green Thread leads</div>
+      <div class="lc-desc">Lloyd Park. Victoria Park. Clissold Park.</div>
     </div>
-    <div class="locale-card">
-      <div class="locale-swatches">
-        <div class="locale-swatch" style="background:#1A7A8A"></div>
-        <div class="locale-swatch" style="background:#4A9AAA"></div>
-        <div class="locale-swatch" style="background:#CDD8DA"></div>
-        <div class="locale-swatch" style="background:#C9974C"></div>
+    <div class="lc">
+      <div class="swatches">
+        <div class="sw" style="background:#1A7A8A"></div>
+        <div class="sw" style="background:#4A9AAA"></div>
+        <div class="sw" style="background:#CDD8DA"></div>
+        <div class="sw" style="background:#C9974C"></div>
       </div>
-      <div class="locale-name">Water & Wetlands</div>
-      <div class="locale-thread">Teal Thread leads</div>
-      <p class="locale-desc">Walthamstow Wetlands. Lee Navigation.</p>
+      <div class="lc-name">Water & Wetlands</div>
+      <div class="lc-thread">Teal Thread leads</div>
+      <div class="lc-desc">Walthamstow Wetlands. Lee Navigation.</div>
     </div>
-    <div class="locale-card">
-      <div class="locale-swatches">
-        <div class="locale-swatch" style="background:#1D4A2D"></div>
-        <div class="locale-swatch" style="background:#A05038"></div>
-        <div class="locale-swatch" style="background:#C0C4B4"></div>
-        <div class="locale-swatch" style="background:#D0CCBC"></div>
+    <div class="lc">
+      <div class="swatches">
+        <div class="sw" style="background:#1D4A2D"></div>
+        <div class="sw" style="background:#A05038"></div>
+        <div class="sw" style="background:#C0C4B4"></div>
+        <div class="sw" style="background:#D0CCBC"></div>
       </div>
-      <div class="locale-name">Cemeteries & Woodland</div>
-      <div class="locale-thread">Deep Green leads</div>
-      <p class="locale-desc">Abney Park. Highgate. Tower Hamlets.</p>
+      <div class="lc-name">Cemeteries & Woodland</div>
+      <div class="lc-thread">Deep Green leads</div>
+      <div class="lc-desc">Abney Park. Highgate. Tower Hamlets.</div>
     </div>
-    <div class="locale-card">
-      <div class="locale-swatches">
-        <div class="locale-swatch" style="background:#C9974C"></div>
-        <div class="locale-swatch" style="background:#C83A70"></div>
-        <div class="locale-swatch" style="background:#2D5A3D"></div>
-        <div class="locale-swatch" style="background:#1A7A8A"></div>
+    <div class="lc">
+      <div class="swatches">
+        <div class="sw" style="background:#C9974C"></div>
+        <div class="sw" style="background:#C83A70"></div>
+        <div class="sw" style="background:#2D5A3D"></div>
+        <div class="sw" style="background:#1A7A8A"></div>
       </div>
-      <div class="locale-name">Garden Squares</div>
-      <div class="locale-thread">All five threads</div>
-      <p class="locale-desc">Canonbury Square. De Beauvoir Square.</p>
+      <div class="lc-name">Garden Squares</div>
+      <div class="lc-thread">All five threads</div>
+      <div class="lc-desc">Canonbury Square. De Beauvoir Square.</div>
     </div>
-    <div class="locale-card">
-      <div class="locale-swatches">
-        <div class="locale-swatch" style="background:#C83A70"></div>
-        <div class="locale-swatch" style="background:#C9974C"></div>
-        <div class="locale-swatch" style="background:#1A7A8A"></div>
-        <div class="locale-swatch" style="background:#2D5A3D"></div>
+    <div class="lc">
+      <div class="swatches">
+        <div class="sw" style="background:#C83A70"></div>
+        <div class="sw" style="background:#C9974C"></div>
+        <div class="sw" style="background:#1A7A8A"></div>
+        <div class="sw" style="background:#2D5A3D"></div>
       </div>
-      <div class="locale-name">Streets & Markets</div>
-      <div class="locale-thread">The vibe of the locale</div>
-      <p class="locale-desc">Ridley Road. Green Street. Walthamstow.</p>
+      <div class="lc-name">Streets & Markets</div>
+      <div class="lc-thread">The vibe of the locale</div>
+      <div class="lc-desc">Ridley Road. Green Street. Walthamstow.</div>
     </div>
-    <div class="locale-card">
-      <div class="locale-swatches">
-        <div class="locale-swatch" style="background:#C07050"></div>
-        <div class="locale-swatch" style="background:#8A5030"></div>
-        <div class="locale-swatch" style="background:#1A7A8A"></div>
-        <div class="locale-swatch" style="background:#C9974C"></div>
+    <div class="lc">
+      <div class="swatches">
+        <div class="sw" style="background:#C07050"></div>
+        <div class="sw" style="background:#8A5030"></div>
+        <div class="sw" style="background:#1A7A8A"></div>
+        <div class="sw" style="background:#C9974C"></div>
       </div>
-      <div class="locale-name">Maritime & Industrial</div>
-      <div class="locale-thread">Red-Earth Thread leads</div>
-      <p class="locale-desc">Hackney Wick. Limehouse. Bow.</p>
+      <div class="lc-name">Maritime & Industrial</div>
+      <div class="lc-thread">Red-Earth Thread leads</div>
+      <div class="lc-desc">Hackney Wick. Limehouse. Bow.</div>
     </div>
   </div>
 
-  <!-- SERVICES -->
-  <div class="locale-heading">How to begin</div>
-  <div class="services-row">
-    <div class="service-item">
-      <div class="service-price">Free</div>
-      <div class="service-label">30 min · Google Meet</div>
-      <div class="service-name">The First Look</div>
-      <p class="service-desc">Walk me through your home on video. I give an initial Locale impression — no preparation needed.</p>
+  <div class="section-label">How to begin</div>
+  <div class="services">
+    <div class="sv">
+      <div class="sv-price">Free</div>
+      <div class="sv-label">30 min · Google Meet</div>
+      <div class="sv-name">The First Look</div>
+      <div class="sv-desc">Walk me through your home on video. I give an initial Locale impression — no preparation needed.</div>
     </div>
-    <div class="service-item">
-      <div class="service-price">£100</div>
-      <div class="service-label">Site visit · verbal direction</div>
-      <div class="service-name">The Conversation</div>
-      <p class="service-desc">Surface assessment and verbal Locale colour direction for the whole property.</p>
-      <div class="service-credit">Credited against decoration · 60 days</div>
+    <div class="sv">
+      <div class="sv-price">£100</div>
+      <div class="sv-label">Site visit · verbal direction</div>
+      <div class="sv-name">The Conversation</div>
+      <div class="sv-desc">Surface assessment and verbal Locale colour direction for the whole property.</div>
+      <div class="sv-credit">Credited against decoration · 60 days</div>
     </div>
-    <div class="service-item featured">
-      <div class="service-price">£200</div>
-      <div class="service-label">Introductory · moving to £250</div>
-      <div class="service-name">The Locale Brief</div>
-      <p class="service-desc">Full written room-by-room direction sheet. Thread, depth, canvas and paint system specified.</p>
-      <div class="service-credit">Credited against decoration · 60 days</div>
+    <div class="sv feat">
+      <div class="sv-price">£200</div>
+      <div class="sv-label">Introductory · moving to £250</div>
+      <div class="sv-name">The Locale Brief</div>
+      <div class="sv-desc">Full written room-by-room direction sheet. Thread, depth, canvas and paint system specified.</div>
+      <div class="sv-credit">Credited against decoration · 60 days</div>
     </div>
   </div>
 
-  <!-- WELCOME LINE -->
-  <div class="welcome-line">Especially welcome: homeowners, Airbnb hosts, boutique hotels, wellness resorts and saunas, property developers and estate agents — and anyone who believes atmosphere makes all the difference.</div>
+  <div class="welcome">Especially welcome: homeowners, Airbnb hosts, boutique hotels, wellness resorts and saunas, property developers and estate agents — and anyone who believes atmosphere makes all the difference.</div>
 
 </div>
 
-<!-- FOOTER -->
-<div class="flyer-footer">
-  <div class="footer-brand">Horizon <em>&</em> Hue</div>
+<div class="footer">
+  <div class="footer-brand">Horizon <span>&</span> Hue</div>
   <div class="footer-contact">
     Akram Khan · View & Vibe Led Decorator<br>
     Suite RA01, 195–197 Wood Street, London E17 3NU<br>
-    <a href="tel:02031431725">020 3143 1725</a> · <a href="https://wa.me/447741541597">WhatsApp</a> · <a href="mailto:hello@horizonandhue.co.uk">hello@horizonandhue.co.uk</a><br>
-    <a href="https://horizonandhue.co.uk">horizonandhue.co.uk</a>
+    020 3143 1725 · WhatsApp · hello@horizonandhue.co.uk<br>
+    horizonandhue.co.uk
   </div>
 </div>
 
-<!-- COLOUR BAND -->
-<div class="colour-band">
+<div class="band">
   <div style="background:#C9974C"></div>
   <div style="background:#C83A70"></div>
   <div style="background:#2D5A3D"></div>
