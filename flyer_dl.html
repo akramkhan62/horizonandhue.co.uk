@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horizon & Hue · DL Flyer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+@media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact;}@page{size:99mm 210mm;margin:0}}
+body{font-family:'Jost',sans-serif;background:#F5EFE6;color:#1A1614;width:99mm;min-height:210mm;margin:0 auto;}
+.band{height:3px;display:flex;width:100%;}
+.band div{flex:1}
+.header{position:relative;overflow:hidden;min-height:50mm;padding:5mm 6mm 4mm;background:#1A1614;}
+.header img.bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.3;z-index:0;}
+.header-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(26,22,20,0.78);z-index:1;}
+.header-content{position:relative;z-index:2;}
+.brand{font-family:'Cormorant Garamond',serif;font-size:22pt;font-weight:300;color:#F5EFE6;line-height:1;margin-bottom:1.5mm;}
+.brand span{color:#C9974C;}
+.descriptor{font-family:'Jost',sans-serif;font-size:6pt;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#C9974C;margin-bottom:3mm;}
+.headline{font-family:'Cormorant Garamond',serif;font-size:11pt;font-weight:300;font-style:italic;color:#F5EFE6;line-height:1.3;}
+.headline span{color:#C9974C;}
+.tagline{background:#C9974C;padding:2mm 6mm;font-family:'Jost',sans-serif;font-size:6pt;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#1A1614;}
+.body{padding:4mm 6mm;background:#F5EFE6;}
+.intro{font-family:'EB Garamond',serif;font-size:9pt;color:#3D3530;line-height:1.6;margin-bottom:4mm;padding-bottom:4mm;border-bottom:0.5px solid rgba(201,151,76,.3);}
+.section-label{font-family:'Jost',sans-serif;font-size:6pt;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#C9974C;margin-bottom:2.5mm;}
+.locale-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.5px;background:rgba(201,151,76,.2);margin-bottom:4mm;}
+.lc{background:#F5EFE6;padding:2.5mm 2mm;}
+.swatches{display:flex;gap:1.5px;margin-bottom:1.5mm;}
+.sw{width:8px;height:8px;border-radius:1px;}
+.lc-name{font-family:'Jost',sans-serif;font-size:5.5pt;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:#1A1614;margin-bottom:1mm;}
+.lc-thread{font-family:'Jost',sans-serif;font-size:5pt;letter-spacing:.3px;text-transform:uppercase;color:#C9974C;}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5mm;margin-bottom:4mm;padding-bottom:4mm;border-bottom:0.5px solid rgba(201,151,76,.3);}
+.sv{padding:2mm;border:0.5px solid rgba(201,151,76,.25);background:#F9F5F0;}
+.sv.feat{background:#1A1614;border-color:#C9974C;}
+.sv-price{font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:300;color:#C9974C;line-height:1;margin-bottom:1mm;}
+.sv-name{font-family:'Cormorant Garamond',serif;font-size:8pt;font-weight:400;color:#1A1614;line-height:1.2;margin-bottom:1mm;}
+.sv.feat .sv-name{color:#F5EFE6;}
+.sv-desc{font-family:'EB Garamond',serif;font-size:7pt;color:#5A5250;line-height:1.4;}
+.sv.feat .sv-desc{color:rgba(245,239,230,.8);}
+.sv-credit{font-family:'Jost',sans-serif;font-size:5pt;color:#C9974C;font-style:italic;margin-top:1mm;}
+.cta-section{background:#1A1614;padding:4mm 6mm;}
+.cta-inner{display:grid;grid-template-columns:1fr 18mm;gap:3mm;align-items:center;}
+.cta-label{font-family:'Jost',sans-serif;font-size:6pt;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(245,239,230,.5);margin-bottom:2mm;}
+.cta-url{font-family:'Cormorant Garamond',serif;font-size:13pt;font-weight:300;color:#C9974C;margin-bottom:1.5mm;}
+.cta-social{font-family:'Jost',sans-serif;font-size:6.5pt;letter-spacing:.5px;color:rgba(245,239,230,.7);margin-bottom:1mm;}
+.cta-social span{color:#C9974C;}
+.qr-img{width:18mm;height:18mm;display:block;}
+.qr-label{font-family:'Jost',sans-serif;font-size:5pt;letter-spacing:.5px;text-transform:uppercase;color:rgba(245,239,230,.4);margin-top:1mm;text-align:center;}
+.footer{background:#1A1614;padding:3mm 6mm 4mm;display:flex;justify-content:space-between;align-items:center;border-top:0.5px solid rgba(201,151,76,.2);}
+.footer-name{font-family:'Cormorant Garamond',serif;font-size:9pt;color:#F5EFE6;margin-bottom:1mm;}
+.footer-name span{color:#C9974C;}
+.footer-contact{font-family:'Jost',sans-serif;font-size:6pt;letter-spacing:.3px;color:rgba(245,239,230,.7);line-height:1.8;}
+.portrait-small{width:14mm;height:14mm;border-radius:50%;overflow:hidden;border:1px solid rgba(201,151,76,.4);flex-shrink:0;}
+.portrait-small img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+</style>
+</head>
+<body>
+
+<div class="band">
+  <div style="background:#C9974C"></div>
+  <div style="background:#C83A70"></div>
+  <div style="background:#2D5A3D"></div>
+  <div style="background:#1A7A8A"></div>
+  <div style="background:#C07050"></div>
+</div>
+
+<div class="header">
+  <img class="bg" src="https://i.ibb.co/bMnsRwZ0/robbie-duncan-Bxle-F4zbb-T8-unsplash.jpg" alt="London view">
+  <div class="header-overlay"></div>
+  <div class="header-content">
+    <div class="brand">Horizon <span>&</span> Hue</div>
+    <div class="descriptor">View & Vibe Led Decorator · London E17</div>
+    <div class="headline">Colour drawn from your <span>view.</span><br>And the vibe of your <span>street.</span></div>
+  </div>
+</div>
+
+<div class="tagline">Decor designed to ground the body and lift the spirit</div>
+
+<div class="body">
+  <p class="intro">The park outside your window. The market on your corner. Every home has a Locale — a view or a vibe that sets the colour brief. Horizon & Hue reads it and brings it inside.</p>
+
+  <div class="section-label">The Locale — six qualifying views</div>
+  <div class="locale-grid">
+    <div class="lc">
+      <div class="swatches">
+        <div class="sw" style="background:#2D5A3D"></div>
+        <div class="sw" style="background:#8FBA6A"></div>
+        <div class="sw" style="background:#C9974C"></div>
+      </div>
+      <div class="lc-name">Parks & Gardens</div>
+      <div class="lc-thread">Green Thread</div>
+    </div>
+    <div class="lc">
+      <div class="swatches">
+        <div class="sw" style="background:#1A7A8A"></div>
+        <div class="sw" style="background:#4A9AAA"></div>
+        <div class="sw" style="background:#CDD8DA"></div>
+      </div>
+      <div class="lc-name">Water & Wetlands</div>
+      <div class="lc-thread">Teal Thread</div>
+    </div>
+    <div class="lc">
+      <div class="swatches">
+        <div class="sw" style="background:#1D4A2D"></div>
+        <div class="sw" style="background:#A05038"></div>
+        <div class="sw" style="background:#C0C4B4"></div>
+      </div>
+      <div class="lc-name">Cemeteries & Woodland</div>
+      <div class="lc-thread">Deep Green</div>
+    </div>
+    <div class="lc">
+      <div class="swatches">
+        <div class="sw" style="background:#C9974C"></div>
+        <div class="sw" style="background:#C83A70"></div>
+        <div class="sw" style="background:#2D5A3D"></div>
+      </div>
+      <div class="lc-name">Garden Squares</div>
+      <div class="lc-thread">All threads</div>
+    </div>
+    <div class="lc">
+      <div class="swatches">
+        <div class="sw" style="background:#C83A70"></div>
+        <div class="sw" style="background:#C9974C"></div>
+        <div class="sw" style="background:#1A7A8A"></div>
+      </div>
+      <div class="lc-name">Streets & Markets</div>
+      <div class="lc-thread">Vibe leads</div>
+    </div>
+    <div class="lc">
+      <div class="swatches">
+        <div class="sw" style="background:#C07050"></div>
+        <div class="sw" style="background:#8A5030"></div>
+        <div class="sw" style="background:#1A7A8A"></div>
+      </div>
+      <div class="lc-name">Maritime & Industrial</div>
+      <div class="lc-thread">Red-Earth</div>
+    </div>
+  </div>
+
+  <div class="section-label">How to begin</div>
+  <div class="services">
+    <div class="sv">
+      <div class="sv-price">Free</div>
+      <div class="sv-name">The First Look</div>
+      <div class="sv-desc">30 min video call — no preparation needed.</div>
+    </div>
+    <div class="sv">
+      <div class="sv-price">£100</div>
+      <div class="sv-name">The Conversation</div>
+      <div class="sv-desc">Site visit and verbal colour direction.</div>
+      <div class="sv-credit">Credited · 60 days</div>
+    </div>
+    <div class="sv feat">
+      <div class="sv-price">£200</div>
+      <div class="sv-name">The Locale Brief</div>
+      <div class="sv-desc">Written room-by-room direction sheet.</div>
+      <div class="sv-credit">Credited · 60 days</div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <div class="cta-inner">
+    <div>
+      <div class="cta-label">Find us online</div>
+      <div class="cta-url">horizonandhue.co.uk</div>
+      <div class="cta-social">Instagram <span>@horizon.and.hue</span></div>
+      <div class="cta-social">Pinterest <span>horizon_and_hue</span></div>
+    </div>
+    <div>
+      <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://horizonandhue.co.uk" alt="QR code">
+      <div class="qr-label">Scan me</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div>
+    <div class="footer-name">Akram <span>Khan</span></div>
+    <div class="footer-contact">
+      020 3143 1725<br>
+      hello@horizonandhue.co.uk<br>
+      Suite RA01, 195–197 Wood Street, E17 3NU
+    </div>
+  </div>
+  <div class="portrait-small">
+    <img src="https://i.ibb.co/mCSTY3fY/9548-EDIT.jpg" alt="Akram Khan">
+  </div>
+</div>
+
+<div class="band">
+  <div style="background:#C9974C"></div>
+  <div style="background:#C83A70"></div>
+  <div style="background:#2D5A3D"></div>
+  <div style="background:#1A7A8A"></div>
+  <div style="background:#C07050"></div>
+</div>
+
+</body>
+</html>
