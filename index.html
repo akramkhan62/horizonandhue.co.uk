@@ -172,7 +172,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
 #hero .hero-grid{grid-template-columns:1fr 300px!important}
 }
 @media(max-width:600px){
-#hero .hero-grid{grid-template-columns:1fr!important;grid-template-rows:300px auto;}
+.hero-grid{grid-template-columns:1fr!important;grid-template-rows:300px auto;}
 #hero .hero-grid>div:last-child{order:-1;height:300px;}
 #hero .hero-grid>div:first-child{padding:40px 6vw 60px!important}
 .locales-grid,.steps-grid,.services-grid{grid-template-columns:1fr}
@@ -213,7 +213,7 @@ section{padding:4rem 5vw}
 </nav>
 
 <section id="hero" style="background:#1A1614;overflow:hidden;">
- <div class="hero-grid" style="display:grid;min-height:100vh;">
+ <div class="hero-grid">
     <div style="display:flex;flex-direction:column;justify-content:center;padding:80px 5vw 60px;position:relative;">
       <div class="hero-band">
         <div style="background:#C9974C"></div>
