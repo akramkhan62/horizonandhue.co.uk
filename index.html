@@ -184,9 +184,9 @@ section{padding:4rem 5vw}
 .hero-sub{font-size:1rem!important;}
 .hero-scroll{display:none!important;}
 }
-#hero .hero-grid>div:last-child{display:none}
-#hero .hero-grid{grid-template-columns:1fr!important}
-#hero .hero-grid>div:first-child{padding:80px 6vw 60px!important}
+.hero-grid{grid-template-columns:1fr!important;grid-template-rows:300px auto;}
+.hero-grid>div:last-child{order:-1;height:300px;}
+.hero-grid>div:first-child{padding:40px 6vw 60px!important}
 .locales-grid,.steps-grid,.services-grid{grid-template-columns:1fr}
 .nav-links{display:none}
 section{padding:4rem 5vw}
