@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta name="p:domain_verify" content="bd1aef2c0335e577458f2935073a39dc">
@@ -12,7 +12,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --ink:#1A1614;
-  --gold:#F0B560; 
+  --gold:#F0B560;
   --cream:#F5EFE6;
   --terra:#C07050;
   --teal:#1A7A8A;
@@ -43,8 +43,9 @@ nav{
 .nav-links{display:flex;gap:2rem;list-style:none;}
 .nav-links a{font-family:'Jost',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:1.8px;text-transform:uppercase;color:var(--charcoal);text-decoration:none;transition:color .2s;}
 .nav-links a:hover{color:var(--gold)}
-#hero{min-height:60vh;display:flex;flex-direction:column;justify-content:center;padding:80px 5vw 60px;background:var(--ink);position:relative;overflow:hidden;}
-.hero-grid{display:grid;grid-template-columns:1fr 420px;min-height:100vh;width:100%;}
+#hero{background:var(--ink);overflow:hidden;}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;min-height:100vh;}
+.hero-content{display:flex;flex-direction:column;justify-content:center;padding:80px 5vw 60px;position:relative;}
 .hero-band{position:absolute;top:0;left:0;right:0;height:3px;display:flex;}
 .hero-band div{flex:1}
 .hero-eyebrow{font-family:'Jost',sans-serif;font-size:.7rem;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:#ffffff;margin-bottom:2.5rem;}
@@ -52,12 +53,12 @@ nav{
 .hero-headline em{color:var(--gold);font-style:italic;}
 .hero-sub{font-family:'EB Garamond',serif;font-size:clamp(1rem,1.8vw,1.25rem);color:rgba(245,239,230,.9);max-width:55ch;line-height:1.75;margin-bottom:3rem;font-style:italic;}
 .hero-cta-row{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;}
+.hero-image{overflow:hidden;}
+.hero-image img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
 .btn-primary{display:inline-block;padding:.85rem 2rem;background:var(--gold);color:var(--ink);font-family:'Jost',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:background .2s,transform .15s;}
 .btn-primary:hover{background:#d4a85a;transform:translateY(-1px)}
-.btn-ghost{display:inline-block;padding:.85rem 2rem;color:rgba(245,239,230,1);color:rgba(245,239,230,.9);font-family:'Jost',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:border-color .2s,color .2s;}
+.btn-ghost{display:inline-block;padding:.85rem 2rem;border:1px solid rgba(245,239,230,.8);color:rgba(245,239,230,.9);font-family:'Jost',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:border-color .2s,color .2s;}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-.hero-rule{position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--gold);opacity:1;}
-.hero-scroll{position:absolute;bottom:2rem;right:5vw;font-family:'Jost',sans-serif;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(245,239,230,.25);writing-mode:vertical-rl;}
 section{padding:6rem 5vw}
 .section-eyebrow{font-family:'Jost',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.25rem);font-weight:300;line-height:1.15;color:var(--ink);margin-bottom:1.5rem;}
@@ -87,7 +88,7 @@ section{padding:6rem 5vw}
 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(201,151,76,.15);max-width:1200px;}
 .step-card{background:var(--ink);padding:2rem 1.75rem;border-top:2px solid transparent;transition:border-color .2s,background .2s;}
 .step-card:hover{border-top-color:var(--gold);background:rgba(245,239,230,.03);}
-.step-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:rgba(201,151,76,.2);line-height:1;margin-bottom:1rem;}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:rgba(201,151,76,.5);line-height:1;margin-bottom:1rem;}
 .step-name{font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;}
 .step-desc{font-family:'EB Garamond',serif;font-size:.95rem;color:rgba(245,239,230,.6);line-height:1.7;}
 #services{background:var(--light)}
@@ -97,53 +98,36 @@ section{padding:6rem 5vw}
 .service-badge{position:absolute;top:-1px;left:2rem;background:var(--gold);color:var(--ink);font-family:'Jost',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:.3rem .8rem;}
 .service-price{font-family:'Cormorant Garamond',serif;font-size:2.75rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.25rem;}
 .service-price-note{font-family:'Jost',sans-serif;font-size:.65rem;letter-spacing:1px;text-transform:uppercase;color:var(--grey);margin-bottom:1.25rem;}
-.service-card.featured .service-price-note{color:rgba(245,239,230,1)}
+.service-card.featured .service-price-note{color:rgba(245,239,230,.4)}
 .service-name{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--ink);margin-bottom:.75rem;}
 .service-card.featured .service-name{color:var(--cream)}
 .service-desc{font-family:'EB Garamond',serif;font-size:.95rem;color:var(--grey);line-height:1.7;margin-bottom:1.5rem;}
-.service-card.featured .service-desc{color:rgba(245,239,230,.95)}
+.service-card.featured .service-desc{color:rgba(245,239,230,.6)}
 .service-credit{font-family:'Jost',sans-serif;font-size:.65rem;letter-spacing:.5px;color:var(--gold);font-style:italic;}
+#work{background:var(--light)}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:1200px;margin:2.5rem auto 0;}
+.work-img{overflow:hidden;aspect-ratio:4/3;}
+.work-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;}
+.work-img img:hover{transform:scale(1.03)}
 #about{background:var(--mist)}
 .about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:5vw;align-items:center;max-width:1200px;margin:0 auto;}
 .about-credentials{display:flex;flex-direction:column;gap:.75rem;margin-top:2rem;}
 .credential{display:flex;align-items:center;gap:.75rem;}
 .credential-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;}
 .credential-text{font-family:'Jost',sans-serif;font-size:.75rem;letter-spacing:.5px;color:var(--charcoal);}
-#contact{background:var(--ink);color:var(--cream);text-align:center;padding:3rem 5vw 2rem;}
-#contact .section-title{
-  color:var(--cream);
-  max-width:none;
-  margin:0 auto 3rem;
-}color:var(--cream);max-width:none;margin:0 auto 1rem;}
+#credentials{background:var(--ink)}
+#credentials .section-title{color:var(--cream)}
+#credentials .section-title em{color:var(--gold);font-style:italic}
+.cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;max-width:1200px;margin:0 auto;}
+.cred-card{padding:1.5rem 2rem;border:1px solid rgba(201,151,76,.3);background:rgba(245,239,230,.03);margin-bottom:1rem;}
+.cred-label{font-family:'Jost',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;}
+.cred-value{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--cream);}
+#contact{background:var(--ink);color:var(--cream);text-align:center;}
+#contact .section-title{color:var(--cream);max-width:none;margin:0 auto 1rem;}
 #contact .section-title em{color:var(--gold);font-style:italic}
 .contact-sub{font-family:'EB Garamond',serif;font-size:1.1rem;color:rgba(245,239,230,1);font-style:italic;margin-bottom:3rem;line-height:2;max-width:70ch;margin-left:auto;margin-right:auto;}
-  font-family:'EB Garamond',serif;
-  font-size:1.1rem;
-  color:var(--gold);
-  font-style:italic;
-  margin-bottom:3rem;
-  line-height:2;
-  max-width:70ch;
-  margin-left:auto;
-  margin-right:auto;
-}font-family:'EB Garamond',serif;font-size:1.1rem;color:rgba(245,239,230,.55);font-style:italic;margin-bottom:3rem;}
-.contact-methods{
-  display:flex;
-  gap:1.5rem;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-top:2rem;
-  margin-bottom:4rem;
-}
-}display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3.5rem;}
-.contact-detail{
-  font-family:'Jost',sans-serif;
-  font-size:.75rem;
-  letter-spacing:1px;
-  color:rgba(245,239,230,.5);
-  margin-top:2.5rem;
-  line-height:2;
-}font-family:'Jost',sans-serif;font-size:.75rem;letter-spacing:1px;color:rgba(245,239,230,.5);margin-top:1.5rem;}
+.contact-methods{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;margin-bottom:4rem;}
+.contact-detail{font-family:'Jost',sans-serif;font-size:.75rem;letter-spacing:1px;color:rgba(245,239,230,.5);margin-top:2.5rem;line-height:2;}
 .contact-detail a{color:rgba(245,239,230,.5);text-decoration:none;}
 .contact-detail a:hover{color:var(--gold)}
 footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2rem 5vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
@@ -165,41 +149,27 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
 .form-note{font-family:'EB Garamond',serif;font-size:.82rem;color:var(--grey);font-style:italic;margin-top:.75rem;text-align:center;}
 .form-success{display:none;text-align:center;padding:1.5rem;background:rgba(45,90,61,.06);border:1px solid rgba(45,90,61,.2);margin-top:1rem;}
 .form-success p{font-family:'EB Garamond',serif;font-size:1rem;color:var(--charcoal);font-style:italic;}
-@media(max-width:500px){.form-row{grid-template-columns:1fr}.form-field.full{grid-column:1}}
 @media(max-width:900px){
-.story-grid,.about-grid{grid-template-columns:1fr}
-.locales-grid,.steps-grid,.services-grid{grid-template-columns:1fr 1fr}
-#hero .hero-grid{grid-template-columns:1fr 300px!important}
+  .story-grid,.about-grid,.cred-grid{grid-template-columns:1fr}
+  .locales-grid,.steps-grid,.services-grid,.work-grid{grid-template-columns:1fr 1fr}
+  .hero-grid{grid-template-columns:1fr 300px!important}
 }
 @media(max-width:600px){
-.hero-grid{grid-template-columns:1fr!important;grid-template-rows:300px auto;}
-#hero .hero-grid>div:last-child{order:-1;height:300px;}
-#hero .hero-grid>div:first-child{padding:40px 6vw 60px!important}
-.locales-grid,.steps-grid,.services-grid{grid-template-columns:1fr}
-.nav-links{display:none}
-section{padding:4rem 5vw}
-#back-to-top{width:26px!important;height:26px!important;bottom:.75rem!important;right:.75rem!important;}
-#social-icons{display:none!important;}
-.hero-headline{font-size:2.2rem!important;max-width:100%!important;}
-.hero-sub{font-size:1rem!important;}
-.hero-scroll{display:none!important;}
-}
-.hero-grid{grid-template-columns:1fr!important;grid-template-rows:300px auto;}
-.hero-grid>div:last-child{order:-1;height:300px;}
-.hero-grid>div:first-child{padding:40px 6vw 60px!important}
-.locales-grid,.steps-grid,.services-grid{grid-template-columns:1fr}
-.nav-links{display:none}
-section{padding:4rem 5vw}
-#back-to-top{width:26px!important;height:26px!important;bottom:.75rem!important;right:.75rem!important;}
-#social-icons{display:none!important;}
-.hero-headline{font-size:2.2rem!important;max-width:100%!important;}
-.hero-sub{font-size:1rem!important;}
+  .hero-grid{grid-template-columns:1fr!important;grid-template-rows:280px auto;}
+  .hero-image{order:-1;height:280px;}
+  .hero-content{padding:2rem 6vw 3rem!important}
+  .hero-mobile-headline{display:block!important}
+  .hero-eyebrow,.hero-sub,.hero-cta-row{display:none}
+  .locales-grid,.steps-grid,.services-grid,.work-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  section{padding:4rem 5vw}
+  #social-icons{display:none!important;}
+  #back-to-top{width:26px!important;height:26px!important;bottom:.75rem!important;right:.75rem!important;}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-brand">Horizon <em>&</em> Hue</div>
   <ul class="nav-links">
@@ -207,41 +177,37 @@ section{padding:4rem 5vw}
     <li><a href="#locales">The Locale</a></li>
     <li><a href="#method">How it works</a></li>
     <li><a href="#services">Services</a></li>
-   <li><a href="#work">Work</a></li>
-<li><a href="#firstlook">Begin</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#firstlook">Begin</a></li>
   </ul>
 </nav>
 
-<section id="hero" style="background:#1A1614;overflow:hidden;">
- <div class="hero-grid">
-    <div style="display:flex;flex-direction:column;justify-content:center;padding:80px 5vw 60px;position:relative;">
+<section id="hero">
+  <div class="hero-grid">
+    <div class="hero-content">
       <div class="hero-band">
-        <div style="background:#C9974C"></div>
+        <div style="background:#F0B560"></div>
         <div style="background:#C83A70"></div>
         <div style="background:#2D5A3D"></div>
         <div style="background:#1A7A8A"></div>
         <div style="background:#C07050"></div>
       </div>
       <div class="hero-eyebrow">Horizon & Hue · View & Vibe Led Decorator · London E17</div>
+      <div class="hero-mobile-headline" style="display:none;font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;line-height:1.15;color:var(--cream);margin-bottom:1.5rem;">Colour drawn from your <em style="color:var(--gold);font-style:italic">view.</em><br>And the vibe of your <em style="color:var(--gold);font-style:italic">street.</em></div>
       <h1 class="hero-headline">Colour drawn from your <em>view.</em><br>And the vibe of your <em>street.</em></h1>
       <p class="hero-sub">The park outside your window. The market on your corner. The canal two streets away. Every home has a Locale. Every Locale has a colour. Specialist decorator — East London and beyond.</p>
       <div class="hero-cta-row">
         <a href="#firstlook" class="btn-primary">Book a free First Look</a>
         <a href="#story" class="btn-ghost">The story behind the name</a>
       </div>
-     
-      <div class="hero-scroll">Scroll</div>
     </div>
-    <div style="overflow:hidden;">
-      <img src="https://i.postimg.cc/QN7CJP2v/kathleen-culbertson-f-Gefk8qb-KPs-unsplash.jpg"
-           alt="Garden path — Horizon & Hue"
-           style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+    <div class="hero-image">
+      <img src="https://i.postimg.cc/QN7CJP2v/kathleen-culbertson-f-Gefk8qb-KPs-unsplash.jpg" alt="Garden path — Horizon & Hue">
     </div>
   </div>
 </section>
 
 <div class="tagline-bar">Decor designed to ground the body and lift the spirit</div>
-
 <div class="h-rule"></div>
 <section id="story">
   <div class="story-grid">
@@ -281,7 +247,7 @@ section{padding:4rem 5vw}
       <div class="locale-swatches">
         <div class="locale-swatch" style="background:#2D5A3D"></div>
         <div class="locale-swatch" style="background:#8FBA6A"></div>
-        <div class="locale-swatch" style="background:#C9974C"></div>
+        <div class="locale-swatch" style="background:#F0B560"></div>
         <div class="locale-swatch" style="background:#E8E0D0"></div>
       </div>
       <div class="locale-name">Parks & Gardens</div>
@@ -293,7 +259,7 @@ section{padding:4rem 5vw}
         <div class="locale-swatch" style="background:#1A7A8A"></div>
         <div class="locale-swatch" style="background:#4A9AAA"></div>
         <div class="locale-swatch" style="background:#CDD8DA"></div>
-        <div class="locale-swatch" style="background:#C9974C"></div>
+        <div class="locale-swatch" style="background:#F0B560"></div>
       </div>
       <div class="locale-name">Water & Wetlands</div>
       <div class="locale-thread">Teal Thread leads</div>
@@ -312,7 +278,7 @@ section{padding:4rem 5vw}
     </div>
     <div class="locale-card">
       <div class="locale-swatches">
-        <div class="locale-swatch" style="background:#C9974C"></div>
+        <div class="locale-swatch" style="background:#F0B560"></div>
         <div class="locale-swatch" style="background:#C83A70"></div>
         <div class="locale-swatch" style="background:#2D5A3D"></div>
         <div class="locale-swatch" style="background:#1A7A8A"></div>
@@ -324,7 +290,7 @@ section{padding:4rem 5vw}
     <div class="locale-card">
       <div class="locale-swatches">
         <div class="locale-swatch" style="background:#C83A70"></div>
-        <div class="locale-swatch" style="background:#C9974C"></div>
+        <div class="locale-swatch" style="background:#F0B560"></div>
         <div class="locale-swatch" style="background:#1A7A8A"></div>
         <div class="locale-swatch" style="background:#2D5A3D"></div>
       </div>
@@ -337,7 +303,7 @@ section{padding:4rem 5vw}
         <div class="locale-swatch" style="background:#C07050"></div>
         <div class="locale-swatch" style="background:#8A5030"></div>
         <div class="locale-swatch" style="background:#1A7A8A"></div>
-        <div class="locale-swatch" style="background:#C9974C"></div>
+        <div class="locale-swatch" style="background:#F0B560"></div>
       </div>
       <div class="locale-name">Maritime & Industrial Heritage</div>
       <div class="locale-thread">Red-Earth Thread leads</div>
@@ -355,7 +321,7 @@ section{padding:4rem 5vw}
     <div class="step-card">
       <div class="step-num">01</div>
       <div class="step-name">The Locale Brief · Global & Local</div>
-      <p class="step-desc">Two layers before any thread is named. The Global Locale: the wider landscape — park, wetland, woodland, canal, garden square. The Local Locale: the immediate surroundings — garden, street, market, landmark. Global sets the primary thread. Local sets the connecting thread. Where there is no strong Global view, Local leads.</p>
+      <p class="step-desc">Two layers before any thread is named. The Global Locale: the wider landscape — park, wetland, woodland, canal, garden square. The Local Locale: the immediate surroundings — garden, street, market, landmark. Global sets the primary thread. Local sets the connecting thread.</p>
     </div>
     <div class="step-card">
       <div class="step-num">02</div>
@@ -470,12 +436,25 @@ section{padding:4rem 5vw}
 </section>
 
 <div class="h-rule"></div>
+<section id="work">
+  <div class="section-eyebrow">Our Work</div>
+  <h2 class="section-title">Rooms we have <em>decorated.</em></h2>
+  <p class="section-body" style="margin-bottom:2.5rem;">A selection of recent work across East and North London — each room read through The Locale methodology.</p>
+  <div class="work-grid">
+    <div class="work-img"><img src="https://i.ibb.co/RkSkgTpW/IMG-1459.jpg" alt="Dining room with sage green panelling — East London"></div>
+    <div class="work-img"><img src="https://i.ibb.co/ymzFBVfm/work-3.jpg" alt="Hallway with geometric tiles and panelling — East London"></div>
+    <div class="work-img"><img src="https://i.ibb.co/XkFpVKFc/Whats-App-Image-2026-04-14-at-08-41-21-2.jpg" alt="Bedroom with sage green walls and brass lighting — East London"></div>
+    <div class="work-img"><img src="https://i.ibb.co/fdgLw9Cp/IMG-1454.jpg" alt="Living room with botanical wallpaper — East London"></div>
+    <div class="work-img"><img src="https://i.ibb.co/ccW8gfN4/work-7.jpg" alt="Living room with coral accent wall — East London"></div>
+    <div class="work-img"><img src="https://i.ibb.co/1GRdVKLj/work-8.jpg" alt="Kitchen in warm grey — East London"></div>
+  </div>
+</section>
+
+<div class="h-rule"></div>
 <section id="about">
   <div class="about-grid">
     <div style="position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--ink);">
-      <img src="https://i.ibb.co/mCSTY3fY/9548-EDIT.jpg"
-           alt="Akram Khan — Horizon & Hue, View & Vibe Led Decorator, London E17"
-           style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+      <img src="https://i.ibb.co/mCSTY3fY/9548-EDIT.jpg" alt="Akram Khan — Horizon & Hue, View & Vibe Led Decorator, London E17" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
       <div style="position:absolute;bottom:0;left:0;right:0;padding:1.25rem 1.5rem;background:linear-gradient(transparent,rgba(26,22,20,.85));">
         <div style="font-family:'Jost',sans-serif;font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(245,239,230,.5);">Akram Khan · Horizon & Hue</div>
       </div>
@@ -486,95 +465,40 @@ section{padding:4rem 5vw}
       <p class="section-body" style="margin-bottom:1.5rem;">View & Vibe Led Decorator. Based in Walthamstow E17. Dulux Select accredited since 2005, with over twenty years of specialist finishing decoration across the UK and internationally.</p>
       <p class="section-body" style="margin-bottom:2rem;">The Locale methodology grew from a simple observation: the colour is already there — in the parks, the markets, the canals, the brickwork of East London's streets. The room's job is to answer it. I find that connection and specify it, surface by surface, room by room.</p>
       <div class="about-credentials">
-        <div class="credential">
-          <div class="credential-dot"></div>
-          <div class="credential-text">Dulux Select Decorator · accredited since 2005</div>
-        </div>
-        <div class="credential">
-          <div class="credential-dot"></div>
-          <div class="credential-text">Specialist in period property finishing · Victorian and Edwardian</div>
-        </div>
-        <div class="credential">
-          <div class="credential-dot"></div>
-          <div class="credential-text">Natural and breathable finishes · lime plaster, clay paint, mineral silicate</div>
-        </div>
-        <div class="credential">
-          <div class="credential-dot"></div>
-          <div class="credential-text">View-led and vibe-led colour methodology · The Locale</div>
-        </div>
-        <div class="credential">
-          <div class="credential-dot"></div>
-          <div class="credential-text">East London based · E17, E9, E8, N16, N1, N6</div>
-        </div>
-        <div class="credential">
-          <div class="credential-dot"></div>
-          <div class="credential-text">Fully insured · Public Liability £2,000,000 · Simply Business</div>
-        </div>
+        <div class="credential"><div class="credential-dot"></div><div class="credential-text">Dulux Select Decorator · accredited since 2005</div></div>
+        <div class="credential"><div class="credential-dot"></div><div class="credential-text">Specialist in period property finishing · Victorian and Edwardian</div></div>
+        <div class="credential"><div class="credential-dot"></div><div class="credential-text">Natural and breathable finishes · lime plaster, clay paint, mineral silicate</div></div>
+        <div class="credential"><div class="credential-dot"></div><div class="credential-text">View-led and vibe-led colour methodology · The Locale</div></div>
+        <div class="credential"><div class="credential-dot"></div><div class="credential-text">East London based · E17, E9, E8, N16, N1, N6</div></div>
+        <div class="credential"><div class="credential-dot"></div><div class="credential-text">Fully insured · Public Liability £2,000,000 · Simply Business</div></div>
       </div>
     </div>
   </div>
 </section>
-  <div class="h-rule"></div>
-<section id="work" style="background:var(--light);padding:4rem 5vw;">
-  <div style="max-width:1200px;margin:0 auto;">
-    <div class="section-eyebrow">Our Work</div>
-    <h2 class="section-title">Rooms we have <em>decorated.</em></h2>
-    <p class="section-body" style="margin-bottom:2.5rem;">A selection of recent work across East and North London — each room read through The Locale methodology.</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
-      <div style="overflow:hidden;aspect-ratio:4/3;">
-        <img src="https://i.ibb.co/RkSkgTpW/IMG-1459.jpg" alt="Dining room with sage green panelling — East London" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      </div>
-      <div style="overflow:hidden;aspect-ratio:4/3;">
-        <img src="https://i.ibb.co/ymzFBVfm/work-3.jpg" alt="Hallway with geometric tiles and panelling — East London" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      </div>
-      <div style="overflow:hidden;aspect-ratio:4/3;">
-        <img src="https://i.ibb.co/XkFpVKFc/Whats-App-Image-2026-04-14-at-08-41-21-2.jpg" alt="Bedroom with sage green walls and brass lighting — East London" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      </div>
-      <div style="overflow:hidden;aspect-ratio:4/3;">
-        <img src="https://i.ibb.co/fdgLw9Cp/IMG-1454.jpg" alt="Living room with botanical wallpaper — East London" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      </div>
-      <div style="overflow:hidden;aspect-ratio:4/3;">
-        <img src="https://i.ibb.co/ccW8gfN4/work-7.jpg" alt="Living room with coral accent wall — East London" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      </div>
-      <div style="overflow:hidden;aspect-ratio:4/3;">
-        <img src="https://i.ibb.co/1GRdVKLj/work-8.jpg" alt="Kitchen in warm grey — East London" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      </div>
-    </div>
-  </div>
-</section>
+
 <div class="h-rule"></div>
-<section id="credentials" style="background:var(--ink);padding:4rem 5vw;">
-  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;">
+<section id="credentials">
+  <div class="cred-grid">
     <div>
       <div class="section-eyebrow">Accreditation & Experience</div>
-      <h2 class="section-title" style="color:var(--cream);">Twenty years.<br><em>Dulux Select</em> since 2005.</h2>
+      <h2 class="section-title">Twenty years.<br><em>Dulux Select</em> since 2005.</h2>
       <p style="font-family:'EB Garamond',serif;font-size:1.05rem;color:rgba(245,239,230,.7);line-height:1.8;margin-bottom:2rem;">The Dulux Select Decorator scheme is awarded to decorators who demonstrate consistently high standards of workmanship, client service and professionalism. Decorators are independently vetted and must maintain standards to retain membership.</p>
       <p style="font-family:'EB Garamond',serif;font-size:1.05rem;color:rgba(245,239,230,.7);line-height:1.8;">Accredited since 2005. Over twenty years of specialist finishing decoration across residential and hospitality sectors in the UK and internationally — including Dubai.</p>
     </div>
-    <div style="display:flex;flex-direction:column;gap:1rem;">
-      <div style="padding:1.5rem 2rem;border:1px solid rgba(201,151,76,.3);background:rgba(245,239,230,.03);">
-        <div style="font-family:'Jost',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">Dulux Select Decorator</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--cream);">Accredited since 2005</div>
-      </div>
-      <div style="padding:1.5rem 2rem;border:1px solid rgba(201,151,76,.3);background:rgba(245,239,230,.03);">
-        <div style="font-family:'Jost',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">Experience</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--cream);">20+ years specialist finishing</div>
-      </div>
-      <div style="padding:1.5rem 2rem;border:1px solid rgba(201,151,76,.3);background:rgba(245,239,230,.03);">
-        <div style="font-family:'Jost',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">Insurance</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--cream);">Public Liability £2,000,000</div>
-      </div>
-      <div style="padding:1.5rem 2rem;border:1px solid rgba(201,151,76,.3);background:rgba(245,239,230,.03);">
-        <div style="font-family:'Jost',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">International</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--cream);">Residential & hospitality · Dubai</div>
-      </div>
+    <div>
+      <div class="cred-card"><div class="cred-label">Dulux Select Decorator</div><div class="cred-value">Accredited since 2005</div></div>
+      <div class="cred-card"><div class="cred-label">Experience</div><div class="cred-value">20+ years specialist finishing</div></div>
+      <div class="cred-card"><div class="cred-label">Insurance</div><div class="cred-value">Public Liability £2,000,000</div></div>
+      <div class="cred-card"><div class="cred-label">International</div><div class="cred-value">Residential & hospitality · Dubai</div></div>
     </div>
   </div>
 </section>
+
 <div class="h-rule"></div>
 <section id="contact">
- <h2 class="section-title" style="text-align:center;max-width:none">Any other way <em>to reach us.</em></h2>
-<p class="contact-sub">Horizon & Hue works with anyone for whom atmosphere is not an afterthought — homeowners, Airbnb hosts, boutique hotels, wellness resorts and saunas, property developers and estate agents. If the feeling of a space matters to you, the Locale Brief was made for you.<br><br>Phone, email, or WhatsApp — whichever suits you best. Akram responds to all enquiries within 24 hours.</p>
+  <div class="section-eyebrow" style="text-align:center;color:var(--gold)">Get in touch</div>
+  <h2 class="section-title" style="text-align:center;max-width:none">Any other way <em>to reach us.</em></h2>
+  <p class="contact-sub">Horizon & Hue works with anyone for whom atmosphere is not an afterthought — homeowners, Airbnb hosts, boutique hotels, wellness resorts and saunas, property developers and estate agents. If the feeling of a space matters to you, the Locale Brief was made for you.<br><br>Phone, email, or WhatsApp — whichever suits you best. Akram responds to all enquiries within 24 hours.</p>
   <div class="contact-methods">
     <a href="https://wa.me/447741541597" class="btn-primary">WhatsApp Akram</a>
     <a href="tel:02031431725" class="btn-ghost">020 3143 1725</a>
@@ -595,28 +519,28 @@ section{padding:4rem 5vw}
     horizonandhue.co.uk · hello@horizonandhue.co.uk · 020 3143 1725
   </div>
 </footer>
-<!-- Back to top button -->
+
 <div id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;width:26px;height:26px;background:var(--gold);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transition:opacity .3s;">
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 12V4M4 8l4-4 4 4" stroke="#1A1614" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M8 12V4M4 8l4-4 4 4" stroke="#1A1614" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </div>
 
-<!-- Social media links -->
 <div id="social-icons" style="position:fixed;top:50%;left:1.5rem;z-index:999;transform:translateY(-50%);display:flex;flex-direction:column;gap:.5rem;">
   <a href="https://www.instagram.com/horizon.and.hue" target="_blank" style="width:24px;height:24px;background:rgba(26,22,20,.8);border:1px solid rgba(201,151,76,.3);display:flex;align-items:center;justify-content:center;text-decoration:none;" title="Instagram">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9974C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#C9974C" stroke="none"/></svg>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C9974C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#C9974C" stroke="none"/></svg>
   </a>
   <a href="https://www.pinterest.com/horizon_and_hue" target="_blank" style="width:24px;height:24px;background:rgba(26,22,20,.8);border:1px solid rgba(201,151,76,.3);display:flex;align-items:center;justify-content:center;text-decoration:none;" title="Pinterest">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9974C"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.77 1.27-5.38 1.27-5.38s-.32-.65-.32-1.61c0-1.51.88-2.64 1.97-2.64.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.54 1.97 1.6 1.97 1.92 0 3.4-2.02 3.4-4.95 0-2.59-1.86-4.4-4.52-4.4-3.08 0-4.89 2.31-4.89 4.7 0 .93.36 1.93.8 2.47.09.11.1.2.07.31-.08.33-.26 1.09-.3 1.24-.05.2-.16.24-.37.15-1.39-.65-2.26-2.68-2.26-4.32 0-3.51 2.55-6.74 7.36-6.74 3.86 0 6.86 2.75 6.86 6.42 0 3.83-2.41 6.91-5.76 6.91-1.13 0-2.19-.59-2.55-1.28l-.69 2.59c-.25.97-.93 2.18-1.39 2.92.05.01.1.01.15.01z"/></svg>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="#C9974C"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.77 1.27-5.38 1.27-5.38s-.32-.65-.32-1.61c0-1.51.88-2.64 1.97-2.64.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.54 1.97 1.6 1.97 1.92 0 3.4-2.02 3.4-4.95 0-2.59-1.86-4.4-4.52-4.4-3.08 0-4.89 2.31-4.89 4.7 0 .93.36 1.93.8 2.47.09.11.1.2.07.31-.08.33-.26 1.09-.3 1.24-.05.2-.16.24-.37.15-1.39-.65-2.26-2.68-2.26-4.32 0-3.51 2.55-6.74 7.36-6.74 3.86 0 6.86 2.75 6.86 6.42 0 3.83-2.41 6.91-5.76 6.91-1.13 0-2.19-.59-2.55-1.28l-.69 2.59c-.25.97-.93 2.18-1.39 2.92.05.01.1.01.15.01z"/></svg>
   </a>
   <a href="https://www.linkedin.com/company/horizon-and-hue" target="_blank" style="width:24px;height:24px;background:rgba(26,22,20,.8);border:1px solid rgba(201,151,76,.3);display:flex;align-items:center;justify-content:center;text-decoration:none;" title="LinkedIn">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9974C"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="#C9974C"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
   </a>
 </div>
+
 <script>
 window.addEventListener('scroll',function(){
   var btn=document.getElementById('back-to-top');
   btn.style.opacity=window.scrollY>300?'1':'0';
-});  
+});
 async function handleSubmit(e) {
   e.preventDefault();
   const form = document.getElementById('firstlook-form');
