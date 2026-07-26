@@ -547,6 +547,10 @@ window.addEventListener('scroll',function(){
   var btn=document.getElementById('back-to-top');
   btn.style.opacity=window.scrollY>300?'1':'0';
 });
+ document.getElementById('locale').addEventListener('change',function(){
+  var box=document.getElementById('describe-box');
+  box.style.display=this.value==='Not sure'?'block':'none';
+}); 
 async function handleSubmit(e) {
   e.preventDefault();
   const form = document.getElementById('firstlook-form');
