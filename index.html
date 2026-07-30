@@ -332,6 +332,71 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
   <div class="section-eyebrow">How to begin</div>
   <h2 class="section-title">Three ways <em>in.</em></h2>
   <p class="section-body">Every project begins with a free 30-minute video call — a conversation about your home, its view, and the vibe of the place it belongs to.</p>
+  <div class="service-card" style="grid-column:1/-1;margin-bottom:1.5rem;">
+  <div class="service-price">Free</div>
+  <div class="service-price-note">Site visit · within 5 miles of E13 · 45 minutes</div>
+  <div class="service-name">The First Look</div>
+  <p class="service-desc">I come to your home, read the view outside your window and the vibe of your street, and tell you what your home could become. No preparation needed. No obligation. 45 minutes. Prefer a video call? I'm happy to do that too — just let me know when you book.</p>
+  <div class="booking-form" id="firstlook">
+    <div class="booking-form-title">Request your First Look</div>
+    <form action="https://formspree.io/f/xnjejapz" method="POST" id="firstlook-form" onsubmit="handleSubmit(event)">
+      <input type="hidden" name="_subject" value="New First Look Request — Horizon & Hue">
+      <input type="hidden" name="_replyto" value="hello@horizonandhue.co.uk">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="Akram Khan" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="hello@youremail.com" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="07700 000000">
+        </div>
+        <div class="form-field">
+          <label for="postcode">Postcode</label>
+          <input type="text" id="postcode" name="postcode" placeholder="E17 3NU" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field full">
+          <label for="locale">What is your view or vibe?</label>
+          <select id="locale" name="locale" required>
+            <option value="" disabled selected>Select your Locale</option>
+            <option value="Parks & Gardens">Parks & Gardens</option>
+            <option value="Water & Wetlands">Water & Wetlands</option>
+            <option value="Cemeteries & Woodland">Cemeteries & Woodland</option>
+            <option value="Garden Squares">Garden Squares</option>
+            <option value="Streets & Market Culture">Streets & Market Culture</option>
+            <option value="Maritime & Industrial Heritage">Maritime & Industrial Heritage</option>
+            <option value="Not sure">Not sure yet — describe or happy to discuss</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field full" id="describe-box" style="display:none;">
+          <label for="describe">Describe your view or vibe</label>
+          <textarea id="describe" name="describe" placeholder="Tell me what surrounds your home — the park opposite, the canal nearby, the street market around the corner..." style="min-height:120px;" maxlength="500"></textarea>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field full">
+          <label for="times">Two or three available times</label>
+          <textarea id="times" name="times" placeholder="e.g. Tuesday after 6pm, Saturday morning, any weekday lunchtime" required></textarea>
+        </div>
+      </div>
+      <button type="submit" class="form-submit">Request a First Look →</button>
+      <p class="form-note">Akram responds within 24 hours.</p>
+    </form>
+    <div class="form-success" id="form-success">
+      <p>Thank you — Akram will be in touch within 24 hours.</p>
+    </div>
+  </div>
+</div>
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;max-width:1200px;margin:2rem auto 0;">
   <div style="padding:1.75rem;border:1px solid rgba(201,151,76,.2);background:var(--cream);">
     <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.25rem;">Free</div>
