@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Parks & Gardens — Green Thread. The colour that belongs to a park-facing home in East London. Horizon & Hue, The Locale Colour Brief.">
+<title>Parks & Gardens · Green Thread · Horizon & Hue</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1A1614;
+  --gold:#F0B560;
+  --cream:#F5EFE6;
+  --terra:#C07050;
+  --teal:#1A7A8A;
+  --mist:#EDE7DC;
+  --charcoal:#3D3530;
+  --grey:#7A726A;
+  --light:#F9F5F0;
+  --green:#2D5A3D;
+  --seasonal:#C8C428;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Jost',sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  font-size:16px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+.h-rule{width:100%;height:1px;background:var(--gold);opacity:.35;}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(245,239,230,.95);backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(201,151,76,.2);
+  padding:0 5vw;height:56px;display:flex;
+  align-items:center;justify-content:space-between;
+}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;letter-spacing:.3px;color:var(--ink);text-decoration:none;}
+.nav-brand em{color:var(--gold);font-style:normal;}
+.nav-back{font-family:'Jost',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--charcoal);text-decoration:none;transition:color .2s;}
+.nav-back:hover{color:var(--gold)}
+section{padding:6rem 5vw}
+.section-eyebrow{font-family:'Jost',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.25rem);font-weight:300;line-height:1.15;color:var(--ink);margin-bottom:1.5rem;}
+.section-title em{color:var(--green);font-style:italic;}
+.section-body{font-family:'EB Garamond',serif;font-size:1.2rem;color:var(--charcoal);line-height:1.9;max-width:65ch;}
+
+/* HERO */
+#locale-hero{position:relative;height:88vh;min-height:560px;overflow:hidden;background:var(--ink);}
+#locale-hero img{width:100%;height:100%;object-fit:cover;display:block;opacity:.88;}
+.locale-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,22,20,.35) 0%,rgba(26,22,20,.15) 40%,rgba(26,22,20,.85) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:4rem 5vw;}
+.locale-hero-eyebrow{font-family:'Jost',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.locale-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.75rem,6vw,5.5rem);font-weight:300;line-height:1.05;color:var(--cream);margin-bottom:1rem;}
+.locale-hero-title em{color:var(--gold);font-style:italic;}
+.locale-hero-sense{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:300;font-style:italic;color:rgba(245,239,230,.9);max-width:40ch;}
+
+/* THE READING */
+#reading{background:var(--cream)}
+.reading-grid{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:start;max-width:1200px;margin:0 auto;}
+.reading-pull{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.2vw,1.85rem);font-weight:300;font-style:italic;color:var(--ink);line-height:1.4;border-left:2px solid var(--green);padding-left:1.5rem;}
+.reading-body{font-family:'EB Garamond',serif;font-size:1.05rem;color:var(--charcoal);line-height:1.9;}
+
+/* THE COLOUR THREAD */
+#thread{background:var(--ink);color:var(--cream)}
+#thread .section-title{color:var(--cream)}
+.thread-intro{font-family:'EB Garamond',serif;font-size:1.1rem;color:rgba(245,239,230,.7);max-width:60ch;line-height:1.8;margin-bottom:3rem;font-style:italic;}
+.thread-row{display:flex;gap:1.5rem;align-items:flex-end;flex-wrap:wrap;margin-bottom:3rem;}
+.thread-swatch{width:140px;}
+.thread-swatch-block{height:140px;margin-bottom:.75rem;}
+.thread-swatch-label{font-family:'Jost',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);}
+.thread-swatch-hex{font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:1px;color:rgba(245,239,230,.5);margin-top:.25rem;}
+.enhancement-note{border:1px dashed rgba(201,151,76,.4);padding:1.5rem 1.75rem;max-width:600px;}
+.enhancement-label{font-family:'Jost',sans-serif;font-size:.62rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;}
+.enhancement-text{font-family:'EB Garamond',serif;font-size:.95rem;font-style:italic;color:rgba(245,239,230,.65);line-height:1.7;}
+
+/* DEPTH */
+#depth{background:var(--light)}
+.depth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1200px;margin:2.5rem auto 0;}
+.depth-card{padding:2.25rem 1.85rem;border:1px solid rgba(201,151,76,.2);background:var(--cream);cursor:pointer;transition:border-color .2s,background .2s;}
+.depth-card:hover{border-color:var(--green);background:var(--mist)}
+.depth-card.active{border-color:var(--green);background:var(--mist)}
+.depth-bar{display:flex;gap:3px;margin-bottom:1.25rem;}
+.depth-bar span{height:4px;flex:1;background:rgba(201,151,76,.25);}
+.depth-bar span.on{background:var(--green);}
+.depth-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--ink);margin-bottom:.6rem;}
+.depth-desc{font-family:'EB Garamond',serif;font-size:.92rem;color:var(--grey);line-height:1.7;}
+
+/* CTA */
+#locale-cta{background:var(--cream);text-align:center;}
+.cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.75rem);font-weight:300;color:var(--ink);margin-bottom:1rem;}
+.cta-title em{color:var(--green);font-style:italic}
+.cta-sub{font-family:'EB Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--charcoal);max-width:55ch;margin:0 auto 2rem;line-height:1.8;}
+.btn-primary{display:inline-block;padding:.9rem 2.25rem;background:var(--green);color:var(--cream);font-family:'Jost',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:background .2s,transform .15s;}
+.btn-primary:hover{background:#244a32;transform:translateY(-1px)}
+.btn-ghost{display:inline-block;margin-top:1rem;padding:.9rem 2.25rem;border:1px solid rgba(45,90,61,.4);color:var(--charcoal);font-family:'Jost',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:border-color .2s,color .2s;}
+.btn-ghost:hover{border-color:var(--green);color:var(--green)}
+
+footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2rem 5vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:rgba(245,239,230,.3);}
+.footer-brand em{color:var(--gold);font-style:normal}
+.footer-address{font-family:'Jost',sans-serif;font-size:.65rem;letter-spacing:.5px;color:rgba(245,239,230,.2);text-align:right;}
+
+@media(max-width:900px){
+  .reading-grid{grid-template-columns:1fr}
+  .depth-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  section{padding:4rem 6vw}
+  .locale-hero-overlay{padding:2.5rem 6vw}
+  .thread-row{gap:1rem}
+  .thread-swatch{width:100px}
+  .thread-swatch-block{height:100px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">Horizon <em>&</em> Hue</a>
+  <a href="index.html" class="nav-back">← Back to The Locale</a>
+</nav>
+
+<section id="locale-hero">
+  <img src="https://res.cloudinary.com/dgar566f/image/upload/v1788103903/HH-Locale-Parks-web2_qdw6yv.png" alt="Parks & Gardens — Green Thread — filtered light through canopy">
+  <div class="locale-hero-overlay">
+    <div class="locale-hero-eyebrow">Parks & Gardens · Green Thread</div>
+    <h1 class="locale-hero-title">Filtered. <em>Green.</em> Breathing.</h1>
+    <p class="locale-hero-sense">Lloyd Park. Victoria Park. Clissold Park. The canopy your rooms already face.</p>
+  </div>
+</section>
+
+<div class="h-rule"></div>
+<section id="reading">
+  <div class="reading-grid">
+    <div>
+      <div class="section-eyebrow">The reading</div>
+      <div class="reading-pull">"Cypress and chinar. The vertical structure of a garden that has always known how to organise itself."</div>
+    </div>
+    <div>
+      <p class="reading-body">The Chahar Bagh — the Persian four-part garden — is the structural origin of every Victorian park these homes face. Lloyd Park, Victoria Park, Clissold Park all carry that same geometry, laid out a century before anyone called it design.</p>
+      <p class="reading-body" style="margin-top:1.25rem;">What your window holds is filtered light through canopy, cypress and chinar in vertical procession, and a green that shifts by the hour without ever losing what it is. Green Thread leads here — not as decoration, but as the colour that was always going to answer this particular view.</p>
+    </div>
+  </div>
+</section>
+
+<div class="h-rule"></div>
+<section id="thread">
+  <div class="section-eyebrow">The colour thread</div>
+  <h2 class="section-title">Green Thread. <em>Grounded in the garden.</em></h2>
+  <p class="thread-intro">Verdigris. Malachite. Viridian. Copper-based greens appear in nearly every decorative tradition the world has produced — this is the version that belongs to a Victorian park in East London.</p>
+
+  <div class="thread-row">
+    <div class="thread-swatch">
+      <div class="thread-swatch-block" style="background:#2D5A3D"></div>
+      <div class="thread-swatch-label">Green Thread</div>
+      <div class="thread-swatch-hex">#2D5A3D</div>
+    </div>
+    <div class="thread-swatch">
+      <div class="thread-swatch-block" style="background:#EDE7DC"></div>
+      <div class="thread-swatch-label">Canvas</div>
+      <div class="thread-swatch-hex">Mist neutral</div>
+    </div>
+    <div class="thread-swatch">
+      <div class="thread-swatch-block" style="background:#1A1614"></div>
+      <div class="thread-swatch-label">Ground</div>
+      <div class="thread-swatch-hex">Ink neutral</div>
+    </div>
+  </div>
+
+  <div class="enhancement-note">
+    <div class="enhancement-label">Enhancement · Coming Later</div>
+    <div class="enhancement-text">Your walls carry the park. Once your base scheme exists, Enhancement lets the accents shift with the season — a golden-green thread arriving each autumn, in wallpaper, a feature wall, or a mural. Ask about this at your First Look.</div>
+  </div>
+</section>
+
+<div class="h-rule"></div>
+<section id="depth">
+  <div class="section-eyebrow">The depth</div>
+  <h2 class="section-title">The Locale sets the colour.<br><em>You set the volume.</em></h2>
+  <p class="section-body">Does the park whisper in the room, or does it declare itself? The thread stays the same. What changes is how loud it speaks.</p>
+  <div class="depth-grid">
+    <div class="depth-card">
+      <div class="depth-bar"><span class="on"></span><span></span><span></span></div>
+      <div class="depth-name">Whisper</div>
+      <div class="depth-desc">One surface. Barely there. Suits a bedroom, a study — a room that holds the park quietly rather than announcing it.</div>
+    </div>
+    <div class="depth-card active">
+      <div class="depth-bar"><span class="on"></span><span class="on"></span><span></span></div>
+      <div class="depth-name">Dialogue</div>
+      <div class="depth-desc">Canvas and thread in conversation. The most popular depth. Suits a living room, a hallway — present without dominating.</div>
+    </div>
+    <div class="depth-card">
+      <div class="depth-bar"><span class="on"></span><span class="on"></span><span class="on"></span></div>
+      <div class="depth-name">Declaration</div>
+      <div class="depth-desc">Fully committed. Suits a park-facing drawing room — a space built to hold the view and mean it.</div>
+    </div>
+  </div>
+</section>
+
+<div class="h-rule"></div>
+<section id="locale-cta">
+  <h2 class="cta-title">Tell me which one <em>felt right.</em></h2>
+  <p class="cta-sub">The First Look takes it from there — a free 30-minute visit where we stand at your window and find your Locale together.</p>
+  <a href="index.html#firstlook" class="btn-primary">Book a free First Look</a><br>
+  <a href="index.html#locales" class="btn-ghost">Explore another Locale</a>
+</section>
+
+<div class="h-rule"></div>
+<footer>
+  <div class="footer-brand">Horizon <em>&</em> Hue</div>
+  <div class="footer-address">
+    Akram Khan · View & Vibe Led Decorator<br>
+    Suite RA01, 195–197 Wood Street, London E17 3NU<br>
+    horizonandhue.co.uk · hello@horizonandhue.co.uk · 020 3143 1725
+  </div>
+</footer>
+
+</body>
+</html>
