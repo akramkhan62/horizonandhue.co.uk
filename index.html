@@ -169,6 +169,9 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
   #back-to-top{width:26px!important;height:26px!important;bottom:.75rem!important;right:.75rem!important;}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+.locale-tile{position:relative;}
+.locale-hover-label{position:absolute;top:1rem;right:1rem;background:rgba(26,22,20,.85);color:#F0B560;font-family:'Jost',sans-serif;font-size:.62rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:.4rem .75rem;opacity:0;transition:opacity .2s;pointer-events:none;}
+.locale-tile:hover .locale-hover-label{opacity:1;}
 </style>
 </head>
 <body>
@@ -243,43 +246,44 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
    <h2 class="section-title" style="color:var(--cream);">Every home has a Locale.<br>Every Locale has a <em>colour.</em></h2>
     <p style="font-family:'EB Garamond',serif;font-size:1.1rem;color:rgba(245,239,230,.7);line-height:1.8;max-width:65ch;margin-bottom:3rem;font-style:italic;">Every home has a view or a vibe. Every view has a colour. Find the Locale that matches your home and see what it could become.</p>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1200px;">
-      <div style="position:relative;overflow:hidden;cursor:pointer;" onclick="window.location.href='parks-and-gardens.html'">
+     <div class="locale-tile" style="position:relative;overflow:hidden;cursor:pointer;" onclick="window.location.href='parks-and-gardens.html'">
         <img src="https://res.cloudinary.com/dgar566f/image/upload/v1788103903/HH-Locale-Parks-web2_qdw6yv.png" alt="Parks & Gardens · Green Thread · Dialogue" style="width:100%;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+       <div class="locale-hover-label">Explore this Locale →</div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:.75rem 1rem;background:linear-gradient(transparent,rgba(26,22,20,.9));">
           <div style="font-family:'Jost',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);">Parks & Gardens</div>
           <div style="font-family:'Jost',sans-serif;font-size:.55rem;letter-spacing:1px;text-transform:uppercase;color:rgba(245,239,230,.6);">Green Thread · Dialogue</div>
         </div>
       </div>
-      <div style="position:relative;overflow:hidden;cursor:pointer;" onclick="window.open('https://www.pinterest.com/horizon_and_hue','_blank')">
-        <img src="https://res.cloudinary.com/dgar566f/image/upload/v1788108916/HH-Locale-Water-web3_b2a39k.png" alt="Water & Wetlands · Teal Thread · Whisper" style="width:100%;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+    <div class="locale-tile" style="position:relative;overflow:hidden;cursor:pointer;" onclick="window.open('https://www.pinterest.com/horizon_and_hue','_blank')">
+        <img src="https://res.cloudinary.com/dgar566f/image/upload/v1788108916/HH-Locale-Water-web3_b2a39k.png" alt="Water & Wetlands · Teal Thread · Whisper" style="width:100%;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"><div class="locale-hover-label">View moodboard on Pinterest ↗</div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:.75rem 1rem;background:linear-gradient(transparent,rgba(26,22,20,.9));">
           <div style="font-family:'Jost',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);">Water & Wetlands</div>
           <div style="font-family:'Jost',sans-serif;font-size:.55rem;letter-spacing:1px;text-transform:uppercase;color:rgba(245,239,230,.6);">Teal Thread · Whisper</div>
         </div>
       </div>
-      <div style="position:relative;overflow:hidden;cursor:pointer;" onclick="window.open('https://www.pinterest.com/horizon_and_hue','_blank')">
-        <img src="https://res.cloudinary.com/dgar566f/image/upload/v1788108738/HH-Locale-Cemeteries-web2_trygqw.png" alt="Cemeteries & Woodland · Deep Green · Declaration" style="width:100%;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+     <div class="locale-tile" style="position:relative;overflow:hidden;cursor:pointer;" onclick="window.open('https://www.pinterest.com/horizon_and_hue','_blank')">
+        <img src="https://res.cloudinary.com/dgar566f/image/upload/v1788108738/HH-Locale-Cemeteries-web2_trygqw.png" alt="Cemeteries & Woodland · Deep Green · Declaration" style="width:100%;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"><div class="locale-hover-label">View moodboard on Pinterest ↗</div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:.75rem 1rem;background:linear-gradient(transparent,rgba(26,22,20,.9));">
           <div style="font-family:'Jost',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);">Cemeteries & Woodland</div>
           <div style="font-family:'Jost',sans-serif;font-size:.55rem;letter-spacing:1px;text-transform:uppercase;color:rgba(245,239,230,.6);">Deep Green · Declaration</div>
         </div>
       </div>
-      <div style="position:relative;overflow:hidden;cursor:pointer;" onclick="window.open('https://www.pinterest.com/horizon_and_hue','_blank')">
-        <img src="https://res.cloudinary.com/dgar566f/image/upload/v1788109542/HH-Locale-Squares-web3_m60gvg.png" alt="Garden Squares · All Threads · Whisper" style="width:100%;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+     <div class="locale-tile" style="position:relative;overflow:hidden;cursor:pointer;" onclick="window.open('https://www.pinterest.com/horizon_and_hue','_blank')">
+        <img src="https://res.cloudinary.com/dgar566f/image/upload/v1788109542/HH-Locale-Squares-web3_m60gvg.png" alt="Garden Squares · All Threads · Whisper" style="width:100%;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"><div class="locale-hover-label">View moodboard on Pinterest ↗</div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:.75rem 1rem;background:linear-gradient(transparent,rgba(26,22,20,.9));">
           <div style="font-family:'Jost',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);">Garden Squares</div>
           <div style="font-family:'Jost',sans-serif;font-size:.55rem;letter-spacing:1px;text-transform:uppercase;color:rgba(245,239,230,.6);">All Threads · Whisper</div>
         </div>
       </div>
-      <div style="position:relative;overflow:hidden;cursor:pointer;" onclick="window.open('https://www.pinterest.com/horizon_and_hue','_blank')">
-      <img src="https://res.cloudinary.com/dgar566f/image/upload/v1788109545/HH-Locale-Streets-web3_uomjm4.png" alt="Streets & Markets · Vibe Leads · Dialogue" style="width:100%;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+     <div class="locale-tile" style="position:relative;overflow:hidden;cursor:pointer;" onclick="window.open('https://www.pinterest.com/horizon_and_hue','_blank')">
+      <img src="https://res.cloudinary.com/dgar566f/image/upload/v1788109545/HH-Locale-Streets-web3_uomjm4.png" alt="Streets & Markets · Vibe Leads · Dialogue" style="width:100%;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"><div class="locale-hover-label">View moodboard on Pinterest ↗</div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:.75rem 1rem;background:linear-gradient(transparent,rgba(26,22,20,.9));">
           <div style="font-family:'Jost',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);">Streets & Markets</div>
           <div style="font-family:'Jost',sans-serif;font-size:.55rem;letter-spacing:1px;text-transform:uppercase;color:rgba(245,239,230,.6);">Vibe Leads · Dialogue</div>
         </div>
       </div>
-      <div style="position:relative;overflow:hidden;cursor:pointer;" onclick="window.open('https://www.pinterest.com/horizon_and_hue','_blank')">
-       <img src="https://res.cloudinary.com/dgar566f/image/upload/v1788108727/HH-Locale-Maritime-web2_wobxvy.png" alt="Maritime & Industrial · Red-Earth Thread · Declaration" style="width:100%;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+      <div class="locale-tile" style="position:relative;overflow:hidden;cursor:pointer;" onclick="window.open('https://www.pinterest.com/horizon_and_hue','_blank')">
+       <img src="https://res.cloudinary.com/dgar566f/image/upload/v1788108727/HH-Locale-Maritime-web2_wobxvy.png" alt="Maritime & Industrial · Red-Earth Thread · Declaration" style="width:100%;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"><div class="locale-hover-label">View moodboard on Pinterest ↗</div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:.75rem 1rem;background:linear-gradient(transparent,rgba(26,22,20,.9));">
           <div style="font-family:'Jost',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);">Maritime & Industrial</div>
           <div style="font-family:'Jost',sans-serif;font-size:.55rem;letter-spacing:1px;text-transform:uppercase;color:rgba(245,239,230,.6);">Red-Earth Thread · Declaration</div>
