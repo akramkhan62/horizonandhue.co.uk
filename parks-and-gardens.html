@@ -107,6 +107,8 @@ section{padding:6rem 5vw}
 
 .depth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;max-width:1200px;margin:2rem 0 0;}
 .depth-card{padding:1.75rem 1.5rem;border:1px solid rgba(240,181,96,.2);background:rgba(245,239,230,.03);}
+.tier-scope{font-family:'EB Garamond',serif;font-size:.85rem;color:rgba(245,239,230,.6);line-height:1.6;margin-bottom:.5rem;}
+.tier-price{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);} 
 .depth-bar{display:flex;gap:3px;margin-bottom:1rem;}
 .depth-bar span{height:4px;flex:1;background:rgba(240,181,96,.2);}
 .depth-bar span.on{background:var(--gold);}
@@ -236,9 +238,9 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
 
 <!-- 5. MORE THAN ONE WALL — colour thread & depth, now the upsell path -->
 <section id="more">
-  <div class="section-eyebrow">If you want more than one wall</div>
-  <h2 class="section-title">The full <em>Green Thread.</em></h2>
-  <p class="more-intro">The First Thread is where most people start. Some rooms want more — the full thread, carried at a volume that suits the space. The Locale sets the colour. You set how loud it speaks.</p>
+  <div class="section-eyebrow">Beyond one wall</div>
+  <h2 class="section-title">The rest of the room, <em>if you want it.</em></h2>
+  <p class="more-intro">The First Thread is where most people start. Some rooms want more.</p>
 
   <div class="thread-row">
     <div class="thread-swatch">
@@ -260,19 +262,19 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
 
   <div class="depth-grid">
     <div class="depth-card">
-      <div class="depth-bar"><span class="on"></span><span></span><span></span></div>
-      <div class="depth-name">Quiet</div>
-      <div class="depth-desc">One surface. Barely there. Suits a bedroom or study.</div>
+      <div class="depth-name">Sky</div>
+      <div class="tier-scope">Wall + ceiling</div>
+      <div class="tier-price">From £320</div>
     </div>
     <div class="depth-card">
-      <div class="depth-bar"><span class="on"></span><span class="on"></span><span></span></div>
-      <div class="depth-name">Present</div>
-      <div class="depth-desc">Canvas and thread in conversation. Suits a living room or hallway.</div>
+      <div class="depth-name">The Locale Thread</div>
+      <div class="tier-scope">Full room</div>
+      <div class="tier-price">From £650</div>
     </div>
     <div class="depth-card">
-      <div class="depth-bar"><span class="on"></span><span class="on"></span><span class="on"></span></div>
-      <div class="depth-name">Full</div>
-      <div class="depth-desc">Fully committed. Suits a park-facing drawing room.</div>
+      <div class="depth-name">The Connecting Thread</div>
+      <div class="tier-scope">Room to room</div>
+      <div class="tier-price">Let's talk</div>
     </div>
   </div>
 </section>
