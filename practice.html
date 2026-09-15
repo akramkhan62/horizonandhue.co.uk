@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Horizon & Hue — materials that bring the outside in. For architects, hospitality, and development.">
+<title>The Practice · Horizon & Hue</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1A1614; --gold:#F0B560; --cream:#F5EFE6; --mist:#EDE7DC;
+  --charcoal:#3D3530; --grey:#7A726A; --light:#F9F5F0;
+  --green:#2D5A3D; --teal:#1A7A8A; --terra:#C07050;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+.h-rule{width:100%;height:1px;background:var(--gold);opacity:.35;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,239,230,.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,151,76,.2);padding:0 5vw;height:56px;display:flex;align-items:center;justify-content:space-between;}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--ink);text-decoration:none;}
+.nav-brand em{color:var(--gold);font-style:normal;}
+.nav-tag{font-family:'Jost',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey);}
+section{padding:5.5rem 5vw}
+.section-eyebrow{font-family:'Jost',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.2vw,2.75rem);font-weight:300;line-height:1.2;color:var(--ink);margin-bottom:1.5rem;}
+.section-title em{font-style:italic;}
+.section-body{font-family:'EB Garamond',serif;font-size:1.15rem;color:var(--charcoal);line-height:1.9;max-width:70ch;}
+
+#hero{background:var(--ink);padding:9rem 5vw 5rem;text-align:center;}
+.hero-tag{font-family:'Jost',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:300;color:var(--cream);line-height:1.15;max-width:16ch;margin:0 auto 1.5rem;}
+.hero-title em{color:var(--gold);font-style:italic;}
+.hero-pitch{font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(1.05rem,1.6vw,1.35rem);color:rgba(245,239,230,.8);max-width:60ch;margin:0 auto;line-height:1.8;}
+
+#categories{background:var(--light);}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1200px;margin:2.5rem auto 0;}
+.cat-card{background:var(--cream);border:1px solid rgba(201,151,76,.25);padding:2.25rem 1.75rem;}
+.cat-swatch{width:48px;height:48px;margin-bottom:1.25rem;}
+.cat-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--ink);margin-bottom:.5rem;}
+.cat-sub{font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.cat-text{font-family:'EB Garamond',serif;font-size:.98rem;color:var(--charcoal);line-height:1.75;}
+
+#how{background:var(--ink);color:var(--cream);}
+#how .section-title{color:var(--cream);}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1200px;margin:2.5rem auto 0;}
+.how-step{padding:1.5rem 0;border-top:1px solid rgba(240,181,96,.25);}
+.how-num{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;color:var(--gold);margin-bottom:.75rem;}
+.how-name{font-family:'Jost',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.5px;color:var(--cream);margin-bottom:.75rem;text-transform:uppercase;}
+.how-text{font-family:'EB Garamond',serif;font-size:.98rem;color:rgba(245,239,230,.75);line-height:1.75;}
+
+#enhancement{background:var(--light);}
+.enh-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:4vw;align-items:center;max-width:1200px;margin:0 auto;}
+.enh-box{background:var(--ink);padding:2.25rem;border:1px solid rgba(240,181,96,.3);}
+.enh-label{font-family:'Jost',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.enh-text{font-family:'EB Garamond',serif;font-style:italic;font-size:1.05rem;color:rgba(245,239,230,.8);line-height:1.8;}
+
+#materials{background:var(--cream);}
+table{width:100%;border-collapse:collapse;max-width:1000px;margin-top:2rem;}
+th{font-family:'Jost',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);background:var(--ink);padding:.9rem 1.25rem;text-align:left;}
+td{font-family:'EB Garamond',serif;font-size:.98rem;color:var(--charcoal);padding:.9rem 1.25rem;border-bottom:1px solid rgba(122,114,106,.15);}
+td:first-child{font-weight:600;color:var(--ink);}
+
+#contact{background:var(--ink);color:var(--cream);text-align:center;}
+.contact-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:300;color:var(--cream);margin-bottom:1rem;}
+.contact-title em{color:var(--gold);font-style:italic;}
+.contact-sub{font-family:'EB Garamond',serif;font-style:italic;font-size:1.05rem;color:rgba(245,239,230,.75);max-width:55ch;margin:0 auto 2rem;line-height:1.8;}
+.btn-gold{display:inline-block;padding:.9rem 2.25rem;background:var(--gold);color:var(--ink);font-family:'Jost',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;}
+.contact-details{margin-top:2rem;font-family:'Jost',sans-serif;font-size:.85rem;color:rgba(245,239,230,.7);}
+
+footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2rem 5vw;text-align:center;}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:.9rem;color:rgba(245,239,230,.3);}
+.footer-brand em{color:var(--gold);font-style:normal;}
+
+@media(max-width:900px){.cat-grid,.how-grid{grid-template-columns:1fr}.enh-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">Horizon <em>&</em> Hue</a>
+  <div class="nav-tag">For Architects · Hospitality · Development</div>
+</nav>
+
+<section id="hero">
+  <div class="hero-tag">The Practice</div>
+  <h1 class="hero-title">Materials that bring the <em>outside in.</em></h1>
+  <p class="hero-pitch">I work with the materials that bring the outside to inside, where season acts as the accent and depth is set by the flow of the space. The colour is never chosen from a fan deck. It's read from what's already there.</p>
+</section>
+
+<div class="h-rule"></div>
+
+<section id="categories">
+  <div class="section-eyebrow">Three readings, every property</div>
+  <h2 class="section-title">One method. <em>Three registers.</em></h2>
+  <p class="section-body">Every site I work on falls into one of three readings — not a style choice, a reading of what's genuinely there: a view, a waterway, or a street's own culture.</p>
+
+  <div class="cat-grid">
+    <div class="cat-card">
+      <div class="cat-swatch" style="background:#2D5A3D"></div>
+      <div class="cat-name">Parks & Gardens</div>
+      <div class="cat-sub">Green Thread</div>
+      <div class="cat-text">Formal gardens, garden squares, open ground, woodland and cemetery edges. Enclosure to openness — one family of green, read differently by what surrounds it.</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-swatch" style="background:#1A7A8A"></div>
+      <div class="cat-name">Canals & Maritime</div>
+      <div class="cat-sub">Teal & Red-Earth Thread</div>
+      <div class="cat-text">Waterways, docks, warehouse conversions, the industrial heritage that still lines East London's canal corridors. Water above, brick below.</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-swatch" style="background:#C9974C"></div>
+      <div class="cat-name">Markets & Worship Places</div>
+      <div class="cat-sub">Gold & Magenta Thread</div>
+      <div class="cat-text">Street culture, market colour, the tilework of Brick Lane's Jamme Masjid. Culture and lifestyle read as directly as any view.</div>
+    </div>
+  </div>
+</section>
+
+<div class="h-rule"></div>
+
+<section id="how">
+  <div class="section-eyebrow">How it works, practically</div>
+  <h2 class="section-title">Read. Specify. <em>Accent.</em></h2>
+  <div class="how-grid">
+    <div class="how-step">
+      <div class="how-num">01</div>
+      <div class="how-name">The Reading</div>
+      <div class="how-text">The view, the water, or the street sets the thread. Not a mood board — a specific colour lineage, traceable to what's actually outside.</div>
+    </div>
+    <div class="how-step">
+      <div class="how-num">02</div>
+      <div class="how-name">The Depth</div>
+      <div class="how-text">Set by the flow of the space, not personal taste alone. A hotel lobby in constant motion reads differently from a snug that holds people still. The room's own rhythm decides how loud the colour speaks.</div>
+    </div>
+    <div class="how-step">
+      <div class="how-num">03</div>
+      <div class="how-name">The Accent</div>
+      <div class="how-text">Season moves through the accent layer — a wall, a wallpaper, a mural — while the base scheme stays fixed. Ongoing, not one-and-done.</div>
+    </div>
+  </div>
+</section>
+
+<div class="h-rule"></div>
+
+<section id="enhancement">
+  <div class="enh-grid">
+    <div>
+      <div class="section-eyebrow">For developments & hospitality</div>
+      <h2 class="section-title">A relationship, <em>not a one-off.</em></h2>
+      <p class="section-body">Base schemes are specified once. Accents can be revisited each season — a genuine, low-cost reason to maintain a working relationship across a property's lifetime, not just at handover.</p>
+    </div>
+    <div class="enh-box">
+      <div class="enh-label">Enhancement</div>
+      <div class="enh-text">The base holds. The accent moves with the year. A standing arrangement, not a single commission.</div>
+    </div>
+  </div>
+</section>
+
+<div class="h-rule"></div>
+
+<section id="materials">
+  <div class="section-eyebrow">Specification</div>
+  <h2 class="section-title">Real brands, <em>real range.</em></h2>
+  <p class="section-body">Paint, wallpaper, and mural, at standard and premium tiers — the full reference is available on request.</p>
+  <table>
+    <tr><th>Category</th><th>Standard–Mid</th><th>Mid–High</th></tr>
+    <tr><td>Paint</td><td>Dulux Heritage</td><td>Farrow & Ball, Little Greene</td></tr>
+    <tr><td>Wallpaper</td><td>House of Hackney, Casadeco</td><td>Sanderson, Cole & Son</td></tr>
+    <tr><td>Mural</td><td>Rebel Walls, Ohpopsi</td><td>Surface View, Inkiostro Bianco, Dado Atelier</td></tr>
+  </table>
+</section>
+
+<div class="h-rule"></div>
+
+<section id="contact">
+  <h2 class="contact-title">Let's talk about <em>your project.</em></h2>
+  <p class="contact-sub">A specification conversation, a site visit, or a materials reference — whatever the brief needs first.</p>
+  <a href="mailto:hello@horizonandhue.co.uk" class="btn-gold">Get in touch</a>
+  <div class="contact-details">
+    020 3143 1725 · hello@horizonandhue.co.uk · horizonandhue.co.uk<br>
+    Dulux Select Decorator since 2005 · £2M Public Liability Insured
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Horizon <em>&</em> Hue</div>
+</footer>
+
+</body>
+</html>
