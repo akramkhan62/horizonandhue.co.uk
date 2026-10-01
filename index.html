@@ -134,9 +134,9 @@ section{padding:6rem 5vw}
 .contact-detail a{color:rgba(245,239,230,.5);text-decoration:none;}
 .contact-detail a:hover{color:var(--gold)}
 footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2rem 5vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-.footer-brand{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:rgba(245,239,230,.3);}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:rgba(245,239,230,.75);}
 .footer-brand em{color:var(--gold);font-style:normal}
-.footer-address{font-family:'Jost',sans-serif;font-size:.65rem;letter-spacing:.5px;color:rgba(245,239,230,.2);text-align:right;}
+.footer-address{font-family:'Jost',sans-serif;font-size:.75rem;letter-spacing:.5px;color:rgba(245,239,230,.65);text-align:right;}
 .tagline-bar{background:var(--gold);padding:.6rem 5vw;font-family:'Jost',sans-serif;font-size:.65rem;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink);text-align:center;}
 .booking-form{margin-top:1.5rem;border-top:1px solid rgba(201,151,76,.2);padding-top:1.5rem;}
 .booking-form-title{font-family:'Jost',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
@@ -159,7 +159,8 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
 }
 @media(max-width:600px){
   .hero-grid{grid-template-columns:1fr!important;grid-template-rows:auto auto;}
-  .hero-image{order:-1;aspect-ratio:1/1;}
+  .hero-image{order:-1;}
+  .hero-image img{height:auto!important;}
   .hero-content{padding:2rem 6vw 3rem!important}
   .hero-headline{display:none!important;}
   .hero-mobile-headline{display:block!important;}
