@@ -158,11 +158,12 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
   .hero-grid{grid-template-columns:1fr 300px!important}
 }
 @media(max-width:600px){
-  .hero-grid{grid-template-columns:1fr!important;grid-template-rows:280px auto;}
-  .hero-image{order:-1;height:280px;}
+  .hero-grid{grid-template-columns:1fr!important;grid-template-rows:auto auto;}
+  .hero-image{order:-1;aspect-ratio:1/1;}
   .hero-content{padding:2rem 6vw 3rem!important}
   .hero-headline{display:none!important;}
   .hero-mobile-headline{display:block!important;}
+  .hero-cta-row{flex-wrap:wrap!important;}
   .hero-eyebrow{display:block!important;margin-bottom:1rem;}
   .hero-sub{display:block!important;}
   .locales-grid,.steps-grid,.services-grid,.work-grid{grid-template-columns:1fr}
@@ -214,6 +215,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
     <div class="hero-image">
       <img src="https://res.cloudinary.com/dgar566f/image/upload/v1787569275/u1894756165_Victorian_orangery_or_garden_room_interior_sage_gre_b8a0afa4-2fb6-43c0-81f2-e7731f0dfc06_sacl1j.png" alt="Victorian orangery — Horizon & Hue">
     </div>
+   </div> 
 </section>
 
 <div class="tagline-bar">Decor designed to ground the body and lift the spirit</div>
