@@ -159,7 +159,88 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
 </section>
 
 <div class="h-rule"></div>
-<!-- ═══ THREE DEPTHS ═══ -->
+<!-- ═══ THREE MOMENTS ═══ -->
+<section id="moments" class="hh-moments" aria-labelledby="hh-moments-title">
+  <style>
+    .hh-moments{padding:4.5rem 1.5rem 3rem;max-width:1200px;margin:0 auto;}
+    .hh-moments__eyebrow{font-family:'Jost',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:#C9974C;text-align:center;margin:0 0 1rem;}
+    .hh-moments__title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.15;text-align:center;color:var(--ink);margin:0 0 1rem;}
+    .hh-moments__intro{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1.15rem;line-height:1.7;color:var(--charcoal);text-align:center;max-width:46ch;margin:0 auto 3rem;}
+    .hh-moments__row{font-family:'Jost',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--charcoal);margin:2.5rem 0 1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(171,156,129,.5);}
+    .hh-moments__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;}
+    .hh-moments__card{margin:0;}
+    .hh-moments__img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;}
+    .hh-moments__label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.4rem;color:var(--ink);margin:1rem 0 .3rem;}
+    .hh-moments__label span{color:#7A726A;font-size:1.1rem;}
+    .hh-moments__line{font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;line-height:1.6;color:var(--charcoal);margin:0;}
+    .hh-moments__note{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:.95rem;color:#7A726A;text-align:center;margin:2.5rem 0 0;}
+    @media(max-width:760px){
+      .hh-moments{padding:3.5rem 1.25rem 2rem;}
+      .hh-moments__grid{grid-template-columns:1fr;gap:2.25rem;max-width:26rem;margin:0 auto;}
+      .hh-moments__img{aspect-ratio:1/1;object-position:center top;}
+    }
+  </style>
+ 
+  <p class="hh-moments__eyebrow">Three moments</p>
+  <h2 class="hh-moments__title" id="hh-moments-title">When do you love the Flats most?</h2>
+  <p class="hh-moments__intro">The grey day, the bright day, or the one that can't decide. Each brings its own room, at home and at work.</p>
+ 
+  <div class="hh-moments__row">At home</div>
+  <div class="hh-moments__grid">
+    <figure class="hh-moments__card">
+      <img class="hh-moments__img" loading="lazy" src="https://res.cloudinary.com/dgar566f/image/upload/c_crop,g_east,w_0.97/f_auto,q_auto,w_900/v1791632841/03-grey-day-wall-and-ceiling_uhmgah.png" alt="Living room with a dry-gold chimney breast under a soft cloud-grey ceiling">
+      <figcaption>
+        <h3 class="hh-moments__label">The grey day <span>· wall and ceiling</span></h3>
+        <p class="hh-moments__line">Cloud lets the grass show its true colour. The sky comes in overhead.</p>
+      </figcaption>
+    </figure>
+    <figure class="hh-moments__card">
+      <img class="hh-moments__img" loading="lazy" src="https://res.cloudinary.com/dgar566f/image/upload/c_crop,g_east,w_0.97/f_auto,q_auto,w_900/v1791632841/02-bright-day-the-room_pvt35n.png" alt="Sunlit living room with warm straw walls and a linen sofa">
+      <figcaption>
+        <h3 class="hh-moments__label">The bright day <span>· the room</span></h3>
+        <p class="hh-moments__line">Sun washes the field pale and opens it up. Every wall holds the light.</p>
+      </figcaption>
+    </figure>
+    <figure class="hh-moments__card">
+      <img class="hh-moments__img" loading="lazy" src="https://res.cloudinary.com/dgar566f/image/upload/f_auto,q_auto,w_900/v1791632842/01-changing-day-one-wall_icnpi1.png" alt="Period living room with one clouded limewash wall in light and deep gold">
+      <figcaption>
+        <h3 class="hh-moments__label">The changing day <span>· one wall</span></h3>
+        <p class="hh-moments__line">Sun and cloud take turns across the grass. One wall, worked by hand, carries both.</p>
+      </figcaption>
+    </figure>
+  </div>
+ 
+  <div class="hh-moments__row">At work</div>
+  <div class="hh-moments__grid">
+    <figure class="hh-moments__card">
+      <img class="hh-moments__img" loading="lazy" src="https://res.cloudinary.com/dgar566f/image/upload/f_auto,q_auto,w_900/v1791632841/05-hotel-grey-day_a1aktr.png" alt="Boutique hotel reception with dry-gold walls above olive green panelling">
+      <figcaption>
+        <h3 class="hh-moments__label">Boutique hotel <span>· the grey day</span></h3>
+        <p class="hh-moments__line">Gold above, treeline below. The feeling of arriving.</p>
+      </figcaption>
+    </figure>
+    <figure class="hh-moments__card">
+      <img class="hh-moments__img" loading="lazy" src="https://res.cloudinary.com/dgar566f/image/upload/f_auto,q_auto,w_900/v1791632841/04-cafe-bright-day_s9g4ky.png" alt="Café counter in front of a warm limewash wall in daylight">
+      <figcaption>
+        <h3 class="hh-moments__label">Café <span>· the bright day</span></h3>
+        <p class="hh-moments__line">Your counter wall, in the light of the Flats. Your brand colours, or the field's.</p>
+      </figcaption>
+    </figure>
+    <figure class="hh-moments__card">
+      <img class="hh-moments__img" loading="lazy" src="https://res.cloudinary.com/dgar566f/image/upload/f_auto,q_auto,w_900/v1791632841/06-spa-changing-day_bnuwv3.png" alt="Spa entrance with a clouded limewash wall and a timber bench">
+      <figcaption>
+        <h3 class="hh-moments__label">Spa <span>· the changing day</span></h3>
+        <p class="hh-moments__line">Limewash at the door. The first breath inside.</p>
+      </figcaption>
+    </figure>
+  </div>
+ 
+  <p class="hh-moments__note">Illustrations of how each moment could look. Your own room is read on the First Look.</p>
+</section>
+<!-- ═══ END THREE MOMENTS ═══ -->
+<div class="h-rule"></div>
+ 
+ <!-- ═══ THREE DEPTHS ═══ -->
 <section class="hh-depths" aria-labelledby="hh-depths-title">
   <style>
     .hh-depths { padding: 4rem 1.5rem 1.5rem; max-width: 1100px; margin: 0 auto; }
