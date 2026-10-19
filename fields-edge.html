@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
-<meta name="description" content="Colour drawn from the open ground of Wanstead Flats, Hackney Marshes and the Lee Valley. Specialist decorator serving E7, E11, E15, E17. One wall from £190. Free 20-minute First Look.">
+<meta name="description" content="Colour drawn from the open ground of Wanstead Flats, Hackney Marshes and the Lee Valley. Specialist decorator serving E7, E11, E15, E17. From £190. Free 20-minute home visit.">
 <meta name="keywords" content="decorator Wanstead Flats, colour consultant Forest Gate, period home decorator E17, feature wall East London, view led decorator London">
 <meta name="geo.region" content="GB-ENG">
 <meta name="geo.placename" content="Walthamstow, East London">
@@ -114,6 +114,35 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
 
 @media(max-width:900px){.reading-grid{grid-template-columns:1fr}.possibility-grid{grid-template-columns:1fr}.depth-grid{grid-template-columns:1fr}}
 @media(max-width:600px){section{padding:4rem 6vw}#possibility{padding-top:3rem}.locale-hero-overlay{padding:2.5rem 6vw}.thread-row{gap:1rem}.thread-swatch{width:100px}.thread-swatch-block{height:100px}}
+
+/* simplified page additions */
+#locale-cta .cta-sub{font-style:normal;font-size:1.15rem;margin-bottom:1.5rem;}
+#more .section-title em{color:var(--gold);}
+.ways-grid{grid-template-columns:repeat(2,1fr);max-width:900px;margin:2rem auto 0;}
+.way-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:.4rem;}
+.way-head .depth-name{margin-bottom:0;font-size:1.5rem;}
+.way-head .tier-price{font-size:1.4rem;white-space:nowrap;}
+#more .tier-scope{font-size:1.05rem;color:rgba(245,239,230,.85);}
+.finish-line{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;color:var(--cream);text-align:center;margin:2.5rem auto .5rem;max-width:40ch;line-height:1.35;}
+.finish-note{font-family:'Jost',sans-serif;font-weight:300;font-size:.92rem;letter-spacing:.2px;color:rgba(245,239,230,.75);text-align:center;max-width:52ch;margin:0 auto;line-height:1.6;}
+.dark-box{max-width:900px;margin:3rem auto 0;background:#4E5544;color:#F5EFE6;padding:1.6rem 1.8rem;border-radius:2px;}
+.dark-box__k{font-family:'Cormorant Garamond',serif;font-size:1.6rem;line-height:1.2;}
+.dark-box__k em{color:#F0B560;}
+.dark-box p{margin-top:.6rem;line-height:1.6;font-size:1.1rem;}
+.me{display:flex;align-items:center;justify-content:center;gap:1.25rem;margin:0 auto 2.25rem;text-align:left;max-width:520px;}
+.me img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid var(--structure);flex-shrink:0;}
+.me__name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;line-height:1.1;}
+.me__line{font-family:'EB Garamond',serif;font-size:1.05rem;color:var(--charcoal);line-height:1.5;margin-top:.25rem;}
+.founding{font-family:'Jost',sans-serif;font-weight:300;font-size:.95rem;color:var(--charcoal);max-width:52ch;margin:0 auto 2rem;line-height:1.6;padding:1rem 1.25rem;border:1px solid rgba(171,156,129,.6);}
+.cta-small{font-family:'Jost',sans-serif;font-size:.9rem;color:var(--charcoal);margin-bottom:.5rem;}
+.f-label{font-family:'Jost',sans-serif;font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--charcoal);display:block;margin-bottom:.4rem;}
+.f-input{width:100%;padding:.75rem 1rem;border:1px solid rgba(132,117,96,.45);background:var(--light);font-family:'EB Garamond',serif;font-size:1.05rem;color:var(--ink);outline:none;}
+.f-input:focus{border-color:var(--canvas);}
+.journal-link{margin-top:1.5rem;font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1.05rem;}
+.journal-link a{color:var(--charcoal);text-underline-offset:4px;text-decoration-color:rgba(171,156,129,.8);}
+.footer-brand{color:rgba(245,239,230,.6)!important;}
+.footer-address{font-size:.75rem!important;}
+@media(max-width:700px){.ways-grid{grid-template-columns:1fr}.me{flex-direction:column;text-align:center}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -129,8 +158,8 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
   <div class="locale-hero-overlay">
     <div class="locale-hero-eyebrow">Field's Edge</div>
  <h1 class="locale-hero-title">Open. <em>Gold.</em> Windswept.</h1>
-     <p class="locale-hero-sense" style="font-family:'Jost',sans-serif;font-size:0.65rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;opacity:0.85;margin-bottom:0.5rem;line-height:1.6;">Where you are is who you are.<br>Let the walls know it too.</p>
-    <p class="locale-hero-sense">Wanstead Flats. Forest Gate's open ground. The horizon your rooms already face.</p>
+     <p class="locale-hero-sense" style="font-size:clamp(1.35rem,2.4vw,1.9rem);color:var(--cream);">Stop guessing colours. Your area already chose them.</p>
+    <p style="font-family:'Jost',sans-serif;font-size:.8rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:rgba(245,239,230,.85);margin-top:.9rem;">Wanstead Flats · Leyton Flats · Hackney Marshes</p>
   </div>
 </section>
 
@@ -150,10 +179,12 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
       <img src="https://res.cloudinary.com/dgar566f/image/upload/c_crop,x_545,y_60,w_560,h_600/f_auto,q_auto,w_900/v1791632842/01-changing-day-one-wall_icnpi1.png" alt="Close-up of a hand-finished limewash wall in light and deep gold, with sunlight crossing it — Dry Gold brought inside" loading="lazy" style="width:100%;display:block;height:420px;object-fit:cover;object-position:center 40%;">
     </div>
     <div>
-      <div class="possibility-eyebrow">One wall could look like this</div>
+      <div class="possibility-eyebrow">Your area's colours</div>
       <h2 class="possibility-title">The field, <em>brought in.</em></h2>
-      <p class="possibility-text">Not a colour chosen from a fan deck. The exact warmth your open ground already carries, at the depth that suits your room — from barely there to fully committed. This is where it starts: one wall, one visit, one true expression of what's already outside your window.</p>
-      <p class="possibility-text" style="margin-top:1rem;">The three colours above come from the field itself. Low Cloud is the ceiling: the soft grey that sits over the Flats on the days the grass shows its true colour. Dry Gold is the grass, from its lightest straw to its deepest. Treeline is the dark edge of trees, the one thing that stays put while the sky changes everything else. On doors, dado and skirting, it frames the room the way the trees frame the field.</p>
+      <p class="possibility-text"><strong style="font-weight:500;">Low Cloud</strong> · the soft grey over the Flats. For the ceiling.</p>
+      <p class="possibility-text"><strong style="font-weight:500;">Dry Gold</strong> · the grass, from pale straw to its deepest tone. For the walls.</p>
+      <p class="possibility-text"><strong style="font-weight:500;">Treeline</strong> · the dark edge of trees. For doors, dado and skirting.</p>
+      <p class="journal-link"><a href="/journal/where-you-are.html">Read the journal: Where you are is who you are</a></p>
     </div>
   </div>
 </section>
@@ -235,212 +266,50 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
     </figure>
   </div>
  
-  <p class="hh-moments__note">Illustrations of how each moment could look. Your own room is read on the First Look.</p>
+  <p class="hh-moments__note">Illustrations of how each moment could look. Your own room is read on the home visit.</p>
 </section>
 <!-- ═══ END THREE MOMENTS ═══ -->
 <div class="h-rule"></div>
- 
- <!-- ═══ THREE DEPTHS ═══ -->
-<section class="hh-depths" aria-labelledby="hh-depths-title">
-  <style>
-    .hh-depths { padding: 4rem 1.5rem 1.5rem; max-width: 1100px; margin: 0 auto; }
-    .hh-depths__eyebrow { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: #847560; margin: 0 0 0.75rem; text-align: center; }
-    .hh-depths__title { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 400; text-align: center; margin: 0 0 0.75rem; }
-    .hh-depths__intro { text-align: center; max-width: 34rem; margin: 0 auto 2.75rem; line-height: 1.6; opacity: 0.85; }
-    .hh-depths__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
-    .hh-depths__card { margin: 0; }
-    .hh-depths__img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 2px; }
-    .hh-depths__label { font-size: 1.1rem; font-weight: 400; margin: 1.1rem 0 0.4rem; padding-top: 0.9rem; border-top: 1px solid #AB9C81; }
-    .hh-depths__line { margin: 0; line-height: 1.55; opacity: 0.85; font-size: 0.95rem; }
-    @media (max-width: 760px) {
-      .hh-depths { padding: 3rem 1.25rem; }
-      .hh-depths__grid { grid-template-columns: 1fr; gap: 2.5rem; max-width: 26rem; margin: 0 auto; }
-      .hh-depths__img { aspect-ratio: 4 / 3; }
-    }
-    .hh-depths__intro, .hh-depths__line { font-family: 'EB Garamond', 'Cormorant Garamond', Garamond, Georgia, serif; font-size: 1.1rem; }
-  </style>
 
- <div class="how-it-works-eyebrow" style="text-align:center;">Three Depths</div>
-  <h2 class="hh-depths__title" id="hh-depths-title">How far you take it is your choice.</h2>
-  <p class="hh-depths__intro">Every room starts with the same field. What changes is how much of it comes inside.</p>
-
-  <div class="hh-depths__grid">
-    <figure class="hh-depths__card">
-      <img class="hh-depths__img" loading="lazy"
-        src="https://res.cloudinary.com/dgar566f/image/upload/c_crop,g_center,w_0.95,h_0.95/f_auto,q_auto,w_900/v1791632841/03-grey-day-wall-and-ceiling_uhmgah.png"
-        alt="Living room with a single taupe feature wall and neutral surroundings">
-      <figcaption>
-        <h3 class="hh-depths__label">Barely there</h3>
-        <p class="hh-depths__line">One wall. The whole field, in its lightest form. The room stays calm.</p>
-      </figcaption>
-    </figure>
-
-    <figure class="hh-depths__card">
-      <img class="hh-depths__img" loading="lazy"
-        src="https://res.cloudinary.com/dgar566f/image/upload/f_auto,q_auto,w_900/v1790880768/download_3_yxlk17.jpg"
-        alt="Period room with two surfaces in two related tones">
-      <figcaption>
-        <h3 class="hh-depths__label">In conversation</h3>
-        <p class="hh-depths__line">The wall and the ceiling. The ground and the sky begin to talk.</p>
-      </figcaption>
-    </figure>
-
-    <figure class="hh-depths__card">
-      <img class="hh-depths__img" loading="lazy"
-        src="https://res.cloudinary.com/dgar566f/image/upload/f_auto,q_auto,w_900/v1790881280/download_4_is3tdz.jpg"
-        alt="Richly layered period room where every surface carries colour">
-      <figcaption>
-        <h3 class="hh-depths__label">Fully committed</h3>
-        <p class="hh-depths__line">Every surface has a role. The whole room belongs to the field. Or carry it through the whole home.</p>
-      </figcaption>
-    </figure>
-  </div>
-    <p style="margin-top:3rem;text-align:center;font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1.1rem;"><a href="/journal/where-you-are.html" style="color:#3D3530;text-underline-offset:4px;text-decoration-color:rgba(171,156,129,.8);">Read the journal: Where you are is who you are</a></p>
-</section>
-<!-- ═══ END THREE DEPTHS ═══ -->
-<section id="how-it-works">
-  <div class="how-it-works-inner">
-    <div class="how-it-works-eyebrow">How it works</div>
-    <div class="how-steps">
-      <div class="how-step">
-        <div class="how-step-num">01</div>
-        <div class="how-step-text">We read your view — the open ground, the treeline, the sky above it — and ask when you love it most.</div>
-      </div>
-      <div class="how-step">
-        <div class="how-step-num">02</div>
-        <div class="how-step-text">We find the colour it's already speaking — no fan deck, no guesswork.</div>
-      </div>
-      <div class="how-step">
-        <div class="how-step-num">03</div>
-        <div class="how-step-text">We bring it inside, at the volume the room actually needs — quiet in a bedroom, full in a drawing room. Not a guess. A judgment call a fan deck can't make for you.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="h-rule"></div>
-
-<section id="first-thread-primary">
-  <div class="ft-primary-wrap">
-    <div class="ft-primary-label">The First Thread · Book Now</div>
-    <div class="ft-primary-title">Your area's colour, <em>brought inside.</em>
-    <p class="ft-primary-text">The field's own warmth, worn now — or refreshed each season, your choice. Paint, wallpaper, or mural, chosen from your Locale.</p>
-    <div class="ft-primary-price">From <strong>£190</strong></div>
-    <div class="ft-primary-scarcity">Founding clients: my first five rooms in the area get the colour plan and sample cards included, in return for photographs and a review.</div>
-    <a href="index.html#firstlook" class="btn-gold">Start with The First Thread</a>
-        <div style="font-family:'EB Garamond',serif;font-style:italic;font-size:1rem;color:rgba(245,239,230,.85);margin-top:.75rem;">Begins with a free 20-minute home visit. I'm 15 minutes away.</div>
-  </div>
-</section>
-
-<div class="h-rule"></div>
-
-<section id="reading">
-  <div class="reading-grid">
-    <div>
-      <div class="section-eyebrow">The reading</div>
-      <div class="reading-pull">"No park geometry here. Just open ground, a treeline at the edge, and a sky that decides everything."</div>
-    </div>
-    <div>
-      <p class="reading-body">Wanstead Flats and the open ground toward Forest Gate carry a different register from a formal park. There's no Chahar Bagh here, no planted beds — just grass, wind, and a horizon that lets the sky do most of the talking. The trees stay at the edge, a line of structure against the openness rather than a canopy overhead.</p>
-      <p class="reading-body" style="margin-top:1.25rem;">The colour here isn't fixed the way a park's green is. Under clear sky, the grass turns golden, warmed by contrast with the blue above it. Under flat grey, that lift disappears and you see the ground's truer, quieter pigment. Both are honest. Neither is wrong. The field simply answers whatever sky it's given. And on the best days, it can't decide — cloud shadow crossing the grass, one patch lit pale, the next in its true colour, then the other way round.</p>
-      <p class="reading-body" style="margin-top:1.25rem;">And that's only the daily shift. Across the year, this Locale changes more than any other — the field moving from green to gold to a weathered brown, the treeline at the edge bare through winter, full by late spring. Most views hold their character. This one keeps rewriting it. The wind rarely lets it settle either — the stillness here is punctuated, not silent.</p>
-    </div>
-  </div>
-</section>
-
-<div class="h-rule"></div>
-
+<!-- ═══ FOUR WAYS IN ═══ -->
 <section id="more">
-  <div class="section-eyebrow">Beyond one wall</div>
-  <h2 class="section-title">Choose how the colour <em>arrives.</em></h2>
-  <p class="more-intro">The colour is already found. What changes is how it comes inside — and that changes the room entirely.</p>
-  <div class="tier-label">Four ways in</div>
-  <div class="depth-grid" style="grid-template-columns:repeat(2,1fr);">
+  <div class="section-eyebrow" style="text-align:center;">Four ways in</div>
+  <h2 class="section-title" style="text-align:center;">Start where <em>you like.</em></h2>
+
+  <div class="depth-grid ways-grid">
     <div class="depth-card">
-      <div class="depth-name">See it</div>
-      <div class="tier-scope">Your area's colours and moments, on this page.</div>
-      <div class="tier-price">Free</div>
+      <div class="way-head"><div class="depth-name">See it</div><div class="tier-price">Free</div></div>
+      <div class="tier-scope">Your area's colours on this page, or a free 20-minute visit if you're near the Flats. I'll look at the room and the light, and tell you what I'd do.</div>
     </div>
     <div class="depth-card">
-      <div class="depth-name">Try it</div>
-      <div class="tier-scope">Five colours chosen from your area, hand-painted on cards, with a guide to the moments. Credited if you book.</div>
-      <div class="tier-price">£15</div>
+      <div class="way-head"><div class="depth-name">Try it</div><div class="tier-price">£15</div></div>
+      <div class="tier-scope">Five colours from the Flats, hand-painted on cards, to live with for a week. Made by hand in small batches. Sent within 5 working days. Credited if you book.</div>
     </div>
     <div class="depth-card">
-      <div class="depth-name">Plan it</div>
+      <div class="way-head"><div class="depth-name">Plan it</div><div class="tier-price">£120</div></div>
       <div class="tier-scope">A home visit and a written room-by-room colour plan. Paint it yourself, or have me paint it. Credited if you book within 60 days.</div>
-      <div class="tier-price">£120</div>
     </div>
     <div class="depth-card">
-      <div class="depth-name">Have it done</div>
-      <div class="tier-scope">Painted by me, for homes and businesses. Not tied to one paint brand.</div>
-      <div class="tier-price">From £190</div>
-    </div>
-  </div>
-  <div class="tier-label">Choose your finish</div>
-  <div class="depth-grid">
-    <div class="depth-card">
-      <div class="depth-name">Paint</div>
-      <div class="tier-scope">The starting point. Flat, eggshell or estate finish. The colour your view already has, on the wall.</div>
-      <div class="tier-price">From £190</div>
-    </div>
-    <div class="depth-card">
-      <div class="depth-name">Wallpaper</div>
-      <div class="tier-scope">Pattern carries the locale more richly than flat paint. Botanical, geometric or photographic — chosen from your Locale.</div>
-      <div class="tier-price">From £190 to hang · paper priced separately</div>
-    </div>
-    <div class="depth-card">
-      <div class="depth-name">Clay paint</div>
-      <div class="tier-scope">Breathable and ultra-matt. The right paint for original lime plaster. Soft depth, no texture. The finish period walls were made for.</div>
-      <div class="tier-price">From £240</div>
-    </div>
-  </div>
-  <p class="more-intro" style="font-size:.9rem;margin-top:1rem;opacity:.85;">From £190 is the minimum charge for a half-day visit. Materials are quoted separately.</p>
-<div class="tier-label" style="margin-top:2.5rem;">Specialist finishes</div>
-  <div class="depth-grid" style="grid-template-columns:repeat(2,1fr);">
-    <div class="depth-card">
-      <div class="depth-name">Mural</div>
-      <div class="tier-scope">The view, life-size. One wall becomes the outside. Photographic or hand-painted — quoted on enquiry.</div>
-      <div class="tier-price">Enquire</div>
-    </div>
-    <div class="depth-card">
-      <div class="depth-name">Limewash</div>
-      <div class="tier-scope">Brushed by hand in two or three coats, over several visits. Priced once I've seen the wall, because the surface and the weather set the time.</div>
-      <div class="tier-price">Quoted on site</div>
+      <div class="way-head"><div class="depth-name">Have it done</div><div class="tier-price">From £190</div></div>
+      <div class="tier-scope">Paint, wallpaper and special finishes, done by me, for homes and businesses. Not tied to one paint brand.</div>
     </div>
   </div>
 
-  <div class="tier-label" style="margin-top:2.5rem;">Choose your moment</div>
-  <div class="depth-grid">
-    <div class="depth-card">
-      <div style="height:3px;background:linear-gradient(90deg,#847560 0 70%,#B0B8C3 70% 100%);margin-bottom:1rem;border-radius:1px;"></div>
-      <div class="depth-name">The grey day</div>
-      <div class="tier-scope">Cloud lets the grass show its true colour. Warm, deep, held.</div>
-    </div>
-    <div class="depth-card">
-      <div style="height:3px;background:#AE9F92;margin-bottom:1rem;border-radius:1px;"></div>
-      <div class="depth-name">The bright day</div>
-      <div class="tier-scope">Sun washes the field pale and opens it up. Light, airy, easy.</div>
-    </div>
-    <div class="depth-card">
-      <div style="height:3px;background:repeating-linear-gradient(90deg,#847560 0 12%,#AE9F92 12% 24%);margin-bottom:1rem;border-radius:1px;"></div>
-      <div class="depth-name">The changing day</div>
-      <div class="tier-scope">Sun and cloud take turns across the grass. Never the same twice. Limewash or colour wash, worked by hand. Or a textured paper that holds the same movement.</div>
-      <div class="tier-price">Signature finish</div>
-    </div>
-  </div>
-  <div style="margin-top:2.5rem;background:#4E5544;color:#F5EFE6;padding:1.6rem 1.8rem;border-radius:2px;">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;line-height:1.2;">Dark room? <em style="color:#F0B560;">White isn't the answer.</em></div>
-    <p style="margin-top:.6rem;line-height:1.6;font-size:1.1rem;">White goes grey in low light. A warm colour from the area, carried across walls, ceiling and woodwork, makes a small room feel snug instead of gloomy. You don't need a view. The feel of the area is enough.</p>
+  <p class="finish-line">Paint, wallpaper, clay paint, limewash or mural. All in your area's colours.</p>
+  <p class="finish-note">Materials are quoted separately. Limewash and murals are quoted once I've seen the wall.</p>
+
+  <div class="dark-box">
+    <div class="dark-box__k">Dark room? <em>White isn't the answer.</em></div>
+    <p>White goes grey in low light. A warm colour from the area, carried across walls, ceiling and woodwork, makes a small room feel snug instead of gloomy. You don't need a view. The feel of the area is enough.</p>
   </div>
 </section>
 
 <!-- COMMERCIAL STRIP -->
-<section style="background:var(--ink);padding:2.5rem 1.5rem;text-align:center;margin-top:0;">
+<section style="background:var(--ink);padding:2.5rem 1.5rem;text-align:center;margin-top:0;border-top:1px solid rgba(240,181,96,.2);">
   <div style="font-family:'Jost',sans-serif;font-size:0.85rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Running a business in the neighbourhood?</div>
   <p style="font-family:'EB Garamond',serif;font-size:1.35rem;font-style:italic;color:#F5EFE6;max-width:40ch;margin:0 auto 1rem;line-height:1.45;">From £190 · Your brand colours, or the area's · Specified for your space, not your home.</p>
   <p style="font-family:'Jost',sans-serif;font-size:1rem;color:rgba(245,239,230,0.85);letter-spacing:0.5px;margin:0 auto 1.6rem;line-height:1.6;">Cafés · salons · yoga studios · wellness · boutique hotels · guest houses · short lets</p>
-  <a href="https://wa.me/442031431725?text=Hi%20Akram%2C%20I%27d%20like%20to%20enquire%20about%20commercial%20decorating%20near%20Wanstead%20Flats" 
+  <a href="https://wa.me/442031431725?text=Hi%20Akram%2C%20I%27d%20like%20to%20enquire%20about%20commercial%20decorating%20near%20Wanstead%20Flats"
      target="_blank"
      style="display:inline-block;font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:0.9rem 1.8rem;text-decoration:none;">
     Enquire on WhatsApp
@@ -449,42 +318,49 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
 
 <div class="h-rule"></div>
 
+<!-- ═══ ME + BOOKING ═══ -->
 <section id="locale-cta">
-  <h2 class="cta-title">Ready to bring <em>the view in?</em></h2>
-  <p class="cta-sub">Start with a free 20-minute video call. You show me the room on camera. I tell you what your Locale contains and what it could become.</p>
+  <div class="me">
+    <img src="data:image/jpeg;base64,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" alt="Akram Khan">
+    <div class="me__txt">
+      <div class="me__name">Akram Khan</div>
+      <div class="me__line">Dulux Select member since 2005. Trained in London. Twenty years on the tools.</div>
+    </div>
+  </div>
+
+  <h2 class="cta-title">I'm local. <em>Let me see the room.</em></h2>
+  <p class="cta-sub">A free 20-minute home visit within 3 miles (5 km) of Plaistow, E13. That covers Forest Gate, Stratford, East Ham, Leyton, Wanstead and nearby. I look at the room and the light, and tell you what I'd do. No obligation. Walthamstow and further out too, when my diary allows. Otherwise we start with a free video call.</p>
+  <p class="founding">Founding clients: book me to paint one of my first five rooms in the area, and the colour plan and sample cards are free. In return, I photograph the finished room and you write a short review.</p>
 
   <!-- WhatsApp button -->
-  <a href="https://wa.me/442031431725?text=Hi%20Akram%2C%20I%27d%20like%20to%20book%20a%20free%20First%20Look%20for%20my%20home%20near%20Wanstead%20Flats" 
-     class="btn-gold" 
-     target="_blank" 
+  <a href="https://wa.me/442031431725?text=Hi%20Akram%2C%20I%27d%20like%20to%20book%20a%20free%20home%20visit%20near%20Wanstead%20Flats"
+     class="btn-gold"
+     target="_blank"
      style="display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1rem;">
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     Message me on WhatsApp
   </a>
-
-  <p style="font-family:'Jost',sans-serif;font-size:.7rem;letter-spacing:.5px;color:var(--grey);margin-bottom:2rem;">Or fill in your details and I'll be in touch within 24 hours.</p>
+  <p class="cta-small">Or call 020 3143 1725. Mention FIELDS when you get in touch.</p>
+  <p class="cta-small" style="margin-bottom:2rem;">Or leave your details and I'll be in touch within 24 hours.</p>
 
   <!-- Minimal booking form -->
-  <form action="https://formspree.io/f/xnjejapz" method="POST" 
+  <form action="https://formspree.io/f/xnjejapz" method="POST"
         style="max-width:520px;margin:0 auto;text-align:left;">
-    <input type="hidden" name="_subject" value="New First Look Request — Fields Edge">
+    <input type="hidden" name="_subject" value="New Home Visit Request — Fields Edge">
     <div style="margin-bottom:1rem;">
-      <label style="font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey);display:block;margin-bottom:.4rem;">Your name</label>
-      <input type="text" name="name" required placeholder="Your name"
-             style="width:100%;padding:.75rem 1rem;border:1px solid rgba(201,151,76,.3);background:var(--light);font-family:'EB Garamond',serif;font-size:1rem;color:var(--ink);outline:none;">
+      <label class="f-label">Your name</label>
+      <input type="text" name="name" required placeholder="Your name" class="f-input">
     </div>
     <div style="margin-bottom:1rem;">
-      <label style="font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey);display:block;margin-bottom:.4rem;">Email address</label>
-      <input type="email" name="email" required placeholder="hello@youremail.com"
-             style="width:100%;padding:.75rem 1rem;border:1px solid rgba(201,151,76,.3);background:var(--light);font-family:'EB Garamond',serif;font-size:1rem;color:var(--ink);outline:none;">
+      <label class="f-label">Email address</label>
+      <input type="email" name="email" required placeholder="hello@youremail.com" class="f-input">
     </div>
     <div style="margin-bottom:1.5rem;">
-      <label style="font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey);display:block;margin-bottom:.4rem;">Postcode</label>
-      <input type="text" name="postcode" placeholder="E17 3NU"
-             style="width:100%;padding:.75rem 1rem;border:1px solid rgba(201,151,76,.3);background:var(--light);font-family:'EB Garamond',serif;font-size:1rem;color:var(--ink);outline:none;">
+      <label class="f-label">Postcode</label>
+      <input type="text" name="postcode" placeholder="e.g. E7" class="f-input">
     </div>
- <button type="submit" class="btn-gold" style="width:100%;cursor:pointer;border:none;">
-      Book my free First Look
+    <button type="submit" class="btn-gold" style="width:100%;cursor:pointer;border:none;">
+      Book my free home visit
     </button>
   </form>
 
@@ -494,7 +370,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
 
 <div class="h-rule"></div>
 <footer>
-  <div class="footer-brand">Horizon <em>&</em> Hue</div>
+  <div class="footer-brand">Horizon <em>&</em> Hue · Where you are is who you are.</div>
   <div class="footer-address">
     Akram Khan · View &amp; Vibe Led Decorator · Dulux Select member since 2005<br>
     Suite RA01, 195–197 Wood Street, London E17 3NU<br>
