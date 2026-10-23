@@ -226,19 +226,32 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
     .hh-two__soon{font-family:'Jost',sans-serif;font-size:.85rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(240,181,96,.5);padding:.85rem 1.2rem;align-self:flex-start;margin-top:auto}
     .hh-two [hidden],.hh-season [hidden]{display:none!important}
     @media(max-width:760px){.hh-two__grid{grid-template-columns:1fr}}
+    .hh-step{max-width:46ch;margin:0 auto 1.3rem;text-align:center}
+    .hh-step__k{font-family:'Jost',sans-serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;color:var(--canvas);margin:0 0 .4rem}
+    .hh-step__k strong{color:var(--ink);font-weight:500}
+    .hh-step__v{font-family:'EB Garamond',serif;font-size:1.18rem;line-height:1.55;color:var(--charcoal);margin:0}
+    .hh-season__tabs+.hh-step{margin-top:-.6rem}
+    .hh-season__mix{font-family:'EB Garamond',serif;font-style:italic;font-size:1.15rem;line-height:1.6;color:var(--charcoal);text-align:center;max-width:52ch;margin:2.2rem auto 0}
   </style>
   <div class="hh-season__in">
     <p class="hh-season__eyebrow">Your area's colours · season by season</p>
-    <h2 class="hh-season__title" id="hh-season-title">Which hour is <em>your room?</em></h2>
-    <p class="hh-season__steps">Find your season · Find your hour · See it on your wall</p>
-    <p class="hh-season__intro">When do you use your room most: morning, late afternoon or evening?</p>
+    <h2 class="hh-season__title" id="hh-season-title">Your season. <em>Your room's moment.</em></h2>
+    <p class="hh-season__steps">Choose your season · Match your room's moment · See it on your wall</p>
 
-    <p class="hh-season__tabslabel">See other seasons</p>
+    <div class="hh-step">
+      <p class="hh-step__k">Step 1 · You choose · <strong>The season</strong></p>
+      <p class="hh-step__v">Which time of year do you love most, or when does the view from that window look its best? Your room will hold it all year round.</p>
+    </div>
     <div class="hh-season__tabs" role="tablist" aria-label="Choose a season">
-      <button class="hh-season__tab" role="tab" id="tab-aw" aria-controls="panel-aw" aria-selected="true">Autumn into winter<small>Now</small></button>
+      <button class="hh-season__tab" role="tab" id="tab-aw" aria-controls="panel-aw" aria-selected="true">Autumn into winter<small>November</small></button>
       <button class="hh-season__tab" role="tab" id="tab-ws" aria-controls="panel-ws" aria-selected="false" tabindex="-1">Winter into spring<small>February</small></button>
       <button class="hh-season__tab" role="tab" id="tab-ss" aria-controls="panel-ss" aria-selected="false" tabindex="-1">Spring into summer<small>May</small></button>
       <button class="hh-season__tab" role="tab" id="tab-sa" aria-controls="panel-sa" aria-selected="false" tabindex="-1">Summer into autumn<small>September</small></button>
+    </div>
+
+    <div class="hh-step">
+      <p class="hh-step__k">Step 2 · Your room decides · <strong>The moment</strong></p>
+      <p class="hh-step__v">When do you use the room, and when does the light reach it? That gives its moment: morning, afternoon or evening.</p>
     </div>
 
     <div class="hh-season__panel" role="tabpanel" id="panel-aw" aria-labelledby="tab-aw">
@@ -250,7 +263,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
           <span class="hh-season__time">Morning into afternoon</span>
           <h3 class="hh-season__name">Mist Rising</h3>
           <p class="hh-season__light">Pale light through morning mist. A room that wakes gently.</p>
-          <p class="hh-season__best">Best for bedrooms, kitchens and rooms you get ready in.</p>
+          <p class="hh-season__best">For rooms you wake and get ready in, or that catch the morning sun.</p>
         </div>
       </article>
       <article class="hh-season__card">
@@ -259,7 +272,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
           <span class="hh-season__time">Afternoon into evening</span>
           <h3 class="hh-season__name">Last Gold</h3>
           <p class="hh-season__light">The last low sun on dry grass, before the lamps come on.</p>
-          <p class="hh-season__best">Best for living rooms, home offices and sitting rooms.</p>
+          <p class="hh-season__best">For rooms you live in through the day, or that catch the afternoon sun.</p>
         </div>
       </article>
       <article class="hh-season__card">
@@ -268,7 +281,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
           <span class="hh-season__time">Evening into midnight</span>
           <h3 class="hh-season__name">Early Lamplight</h3>
           <p class="hh-season__light">Deep green and warm lamps. A room that holds you after dark.</p>
-          <p class="hh-season__best">Best for snugs, dining rooms and small dark rooms.</p>
+          <p class="hh-season__best">For rooms you use after dark, or that get little daylight.</p>
         </div>
       </article>
     </div>
@@ -283,7 +296,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
           <span class="hh-season__time">Morning into afternoon</span>
           <h3 class="hh-season__name">First Thaw</h3>
           <p class="hh-season__light">Frost giving way to pale sun. A room that feels new.</p>
-          <p class="hh-season__best">Best for bedrooms and kitchens.</p>
+          <p class="hh-season__best">For rooms you wake and get ready in, or that catch the morning sun.</p>
         </div>
       </article>
       <article class="hh-season__card">
@@ -292,7 +305,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
           <span class="hh-season__time">Afternoon into evening</span>
           <h3 class="hh-season__name">Blossom Light</h3>
           <p class="hh-season__light">White blossom against dark wood, warm for the first time.</p>
-          <p class="hh-season__best">Best for living rooms and studies.</p>
+          <p class="hh-season__best">For rooms you live in through the day, or that catch the afternoon sun.</p>
         </div>
       </article>
       <article class="hh-season__card">
@@ -301,7 +314,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
           <span class="hh-season__time">Evening into midnight</span>
           <h3 class="hh-season__name">Slow Dusk</h3>
           <p class="hh-season__light">The evenings stretch out, cool blue turning to lamplight.</p>
-          <p class="hh-season__best">Best for dining rooms and bedrooms.</p>
+          <p class="hh-season__best">For rooms you use after dark, or that get little daylight.</p>
         </div>
       </article>
       </div>
@@ -315,7 +328,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
           <span class="hh-season__time">Morning into afternoon</span>
           <h3 class="hh-season__name">Open Window</h3>
           <p class="hh-season__light">Bright, cool and clean. Windows open.</p>
-          <p class="hh-season__best">Best for kitchens and bathrooms.</p>
+          <p class="hh-season__best">For rooms you wake and get ready in, or that catch the morning sun.</p>
         </div>
       </article>
       <article class="hh-season__card">
@@ -324,7 +337,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
           <span class="hh-season__time">Afternoon into evening</span>
           <h3 class="hh-season__name">Long Light</h3>
           <p class="hh-season__light">High sun on new grass. Generous and easy.</p>
-          <p class="hh-season__best">Best for living rooms and garden rooms.</p>
+          <p class="hh-season__best">For rooms you live in through the day, or that catch the afternoon sun.</p>
         </div>
       </article>
       <article class="hh-season__card">
@@ -333,7 +346,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
           <span class="hh-season__time">Evening into midnight</span>
           <h3 class="hh-season__name">Late Blue</h3>
           <p class="hh-season__light">The long blue evening before dark.</p>
-          <p class="hh-season__best">Best for bedrooms and snugs.</p>
+          <p class="hh-season__best">For rooms you use after dark, or that get little daylight.</p>
         </div>
       </article>
       </div>
@@ -347,7 +360,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
           <span class="hh-season__time">Morning into afternoon</span>
           <h3 class="hh-season__name">Gold Haze</h3>
           <p class="hh-season__light">Warm haze, gold even early.</p>
-          <p class="hh-season__best">Best for bedrooms and breakfast rooms.</p>
+          <p class="hh-season__best">For rooms you wake and get ready in, or that catch the morning sun.</p>
         </div>
       </article>
       <article class="hh-season__card">
@@ -356,7 +369,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
           <span class="hh-season__time">Afternoon into evening</span>
           <h3 class="hh-season__name">Harvest Light</h3>
           <p class="hh-season__light">Heavy gold light and deep shadows.</p>
-          <p class="hh-season__best">Best for living rooms and dining rooms.</p>
+          <p class="hh-season__best">For rooms you live in through the day, or that catch the afternoon sun.</p>
         </div>
       </article>
       <article class="hh-season__card">
@@ -365,11 +378,13 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
           <span class="hh-season__time">Evening into midnight</span>
           <h3 class="hh-season__name">First Lamps</h3>
           <p class="hh-season__light">Warm dusk turning cool. The first lamps of the year.</p>
-          <p class="hh-season__best">Best for snugs and sitting rooms.</p>
+          <p class="hh-season__best">For rooms you use after dark, or that get little daylight.</p>
         </div>
       </article>
       </div>
     </div>
+
+    <p class="hh-season__mix">One season for the whole home, or one for each room. You choose. Each room brings its own moment.</p>
 
     <div class="hh-two">
       <p class="hh-two__head">Two ways to start</p>
@@ -380,6 +395,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
           <p>For homes near E13. I look at the room and the light, and tell you which moment it catches. Twenty minutes. No obligation.</p>
           <a class="btn-gold" href="https://wa.me/442031431725?text=Hi%20Akram%2C%20I%27d%20like%20to%20book%20a%20free%20home%20visit%20near%20Wanstead%20Flats" target="_blank">Book a free home visit</a>
           <p class="hh-two__small">Within 3 miles (5 km) of Plaistow, E13. Further out when my diary allows.</p>
+          <p class="hh-two__small" style="font-style:italic;">Mixing seasons? We'll plan it at the visit.</p>
         </div>
         <div class="hh-two__card">
           <b>Sample cards · £15</b>
@@ -440,7 +456,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
     </div>
     <div class="depth-card">
       <div class="way-head"><div class="depth-name">Plan it</div><div class="tier-price">£100 <span style="font-size:.85rem;opacity:.8;font-style:italic">intro price</span></div></div>
-      <div class="tier-scope">A written room-by-room plan: the moment each room holds, and the paints that match it. Credited if you book within 60 days.</div>
+      <div class="tier-scope">A written room-by-room plan: the season and moment for each room, and the paints that match. Credited if you book within 60 days.</div>
     </div>
     <div class="depth-card">
       <div class="way-head"><div class="depth-name">Have it done</div><div class="tier-price">From £190</div></div>
