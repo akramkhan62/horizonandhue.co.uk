@@ -206,11 +206,33 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
     .hh-season__badge{font-family:'Jost',sans-serif;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--canvas);text-align:center;margin:-1rem 0 2rem}
     .hh-season__pin{font-family:'EB Garamond',serif;font-style:italic;font-size:1rem;margin:.4rem 0 0}
     .hh-season__pin a{color:var(--charcoal);text-underline-offset:4px;text-decoration-color:rgba(171,156,129,.8)}
+    .hh-season__steps{font-family:'Jost',sans-serif;font-size:.85rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink);text-align:center;margin:0 0 1.2rem}
+    .hh-season__rooms{font-family:'EB Garamond',serif;font-size:1.1rem;line-height:1.6;color:var(--grey);text-align:center;max-width:52ch;margin:-2rem auto 3rem}
+    .hh-season__sample{margin:2.5rem auto 0;max-width:900px;background:var(--ink);color:var(--cream);padding:1.8rem 1.8rem 2rem;display:grid;gap:.6rem;text-align:center;justify-items:center}
+    .hh-season__sample b{font-family:'Jost',sans-serif;font-weight:500;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+    .hh-season__sample h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.9rem;line-height:1.2;margin:0}
+    .hh-season__sample p{font-family:'EB Garamond',serif;font-size:1.1rem;line-height:1.6;color:rgba(245,239,230,.88);margin:0;max-width:56ch}
+    .hh-season__sample .btn-gold{margin-top:.8rem}
+    .hh-season__ask{font-family:'EB Garamond',serif;font-size:1.1rem;line-height:1.6;color:var(--charcoal);max-width:50ch;margin:0}
+    .hh-two{margin:2.8rem auto 0;max-width:960px}
+    .hh-two__head{font-family:'Jost',sans-serif;font-size:.85rem;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--canvas);text-align:center;margin:0 0 1.2rem}
+    .hh-two__grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+    .hh-two__card{background:var(--ink);color:var(--cream);padding:1.8rem 1.7rem 2rem;display:flex;flex-direction:column;gap:.7rem}
+    .hh-two__card b{font-family:'Jost',sans-serif;font-weight:500;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+    .hh-two__card h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.8rem;line-height:1.15;margin:0}
+    .hh-two__card p{font-family:'EB Garamond',serif;font-size:1.08rem;line-height:1.6;color:rgba(245,239,230,.88);margin:0}
+    .hh-two__card .btn-gold{margin-top:auto;align-self:flex-start}
+    .hh-two__card .hh-two__small{font-family:'Jost',sans-serif;font-weight:300;font-size:.88rem;line-height:1.55;color:rgba(245,239,230,.75)}
+    .hh-two__soon{font-family:'Jost',sans-serif;font-size:.85rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(240,181,96,.5);padding:.85rem 1.2rem;align-self:flex-start;margin-top:auto}
+    .hh-two [hidden],.hh-season [hidden]{display:none!important}
+    @media(max-width:760px){.hh-two__grid{grid-template-columns:1fr}}
   </style>
   <div class="hh-season__in">
     <p class="hh-season__eyebrow">Your area's colours · season by season</p>
     <h2 class="hh-season__title" id="hh-season-title">Which hour is <em>your room?</em></h2>
+    <p class="hh-season__steps">Find your season · Find your hour · See it on your wall</p>
     <p class="hh-season__intro">When do you use your room most: morning, late afternoon or evening?</p>
+    <p class="hh-season__rooms">Every room has its hour. A bedroom lives in the morning. A living room comes alive in late afternoon. A dining room belongs to the evening. One home can hold all three moments.</p>
 
     <p class="hh-season__tabslabel">See other seasons</p>
     <div class="hh-season__tabs" role="tablist" aria-label="Choose a season">
@@ -350,17 +372,32 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
       </div>
     </div>
 
-    <div class="hh-season__turn">
-      <b>Signature finish · The Turning Wall</b>
-      <p>One wall that holds the moment the season turns.</p>
-      <span>A specialist finish of your choice: a hand-worked paint effect or colour wash, a wallpaper, or a mural that carries the season across the wall. Quoted on site.</span>
+    <div class="hh-two">
+      <p class="hh-two__head">Two ways to start</p>
+      <div class="hh-two__grid">
+        <div class="hh-two__card">
+          <b>Free home visit</b>
+          <h3>I come and see the room.</h3>
+          <p>For homes near E13. I look at the room and the light, and tell you which moment it catches. Twenty minutes. No obligation.</p>
+          <a class="btn-gold" href="https://wa.me/442031431725?text=Hi%20Akram%2C%20I%27d%20like%20to%20book%20a%20free%20home%20visit%20near%20Wanstead%20Flats" target="_blank">Book a free home visit</a>
+          <p class="hh-two__small">Within 3 miles (5 km) of Plaistow, E13. Further out when my diary allows.</p>
+        </div>
+        <div class="hh-two__card">
+          <b>Sample cards · £15</b>
+          <h3>You don't have to choose.</h3>
+          <p>For anywhere, or if you'd rather take your time. Three hand-painted cards, one for each moment of your season, large enough to tape to the wall. Live with them for a week. Your wall will tell you. Every paint is named on the card. Credited if you book.</p>
+          <a class="btn-gold" id="hh-sample-btn" href="https://wa.me/442031431725?text=Hi%20Akram%2C%20I%27d%20like%20the%20Autumn%20into%20Winter%20sample%20cards.%20My%20address%20is%3A%20" target="_blank">Order sample cards</a>
+          <p class="hh-two__soon" id="hh-sample-soon" hidden></p>
+          <p class="hh-two__small" id="hh-sample-note">Message me with your address. I'll reply with payment details. Cards are posted once paid. UK postage included. <a href="/terms.html" style="color:inherit;text-underline-offset:3px;">Terms</a></p>
+        </div>
+      </div>
     </div>
 
     <div class="hh-season__cta">
-      <a class="btn-gold" href="https://wa.me/442031431725?text=Hi%20Akram%2C%20I%27d%20like%20to%20book%20a%20free%20home%20visit%20near%20Wanstead%20Flats" target="_blank">Book a free home visit · WhatsApp</a>
-      <a class="btn-ghost" style="margin-top:0;" href="https://wa.me/442031431725?text=Hi%20Akram%2C%20I%27d%20like%20sample%20cards%20for%20my%20season" target="_blank">Or order sample cards for your season · £15</a>
-      <p class="hh-season__note" style="max-width:62ch;">Sample set: three hand-painted cards for your season, one per moment. Each moment is a scheme of existing paints from British makers, chosen by Horizon &amp; Hue, and every product is named on your cards. Pictures are illustrations.</p>
+      <p class="hh-season__ask"><a href="https://wa.me/442031431725?text=Hi%20Akram%2C%20here%27s%20a%20photo%20of%20my%20room" target="_blank" style="color:var(--ink);text-underline-offset:4px;">Not sure? Send me a photo of the room</a> on WhatsApp and tell me when you use it most. I'll tell you which moment it catches. That's all.</p>
+      <p class="hh-season__note">Pictures are illustrations. Each moment is a scheme of existing paints from British makers, chosen by Horizon &amp; Hue.</p>
       <p class="hh-season__pin" data-pin="panel-aw"><a href="https://pin.it/65f5hwkdv" target="_blank" rel="noopener">More ideas for this season on Pinterest →</a></p>
+      <p class="hh-season__pin hh-season__ig"><a href="https://www.instagram.com/horizon.and.hue" target="_blank" rel="noopener">Not ready yet? Follow along on Instagram for a new moment each week →</a></p>
     </div>
   </div>
   <script>
@@ -368,7 +405,11 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
     var tabs=[].slice.call(document.querySelectorAll('.hh-season__tab'));
     function show(t){
       tabs.forEach(function(b){var on=b===t;b.setAttribute('aria-selected',on?'true':'false');b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).hidden=!on;});
-      [].forEach.call(document.querySelectorAll('.hh-season__pin'),function(p){p.hidden=p.getAttribute('data-pin')!==t.getAttribute('aria-controls');});
+      [].forEach.call(document.querySelectorAll('.hh-season__pin[data-pin]'),function(p){p.hidden=p.getAttribute('data-pin')!==t.getAttribute('aria-controls');});
+      var S={'panel-aw':['Autumn into Winter',''],'panel-ws':['Winter into Spring','February'],'panel-ss':['Spring into Summer','May'],'panel-sa':['Summer into Autumn','September']}[t.getAttribute('aria-controls')];
+      var btn=document.getElementById('hh-sample-btn'),soon=document.getElementById('hh-sample-soon'),note=document.getElementById('hh-sample-note');
+      if(S[1]){btn.hidden=true;note.hidden=true;soon.hidden=false;soon.textContent=S[0]+' sample set · available from '+S[1];}
+      else{btn.hidden=false;note.hidden=false;soon.hidden=true;btn.href='https://wa.me/442031431725?text='+encodeURIComponent("Hi Akram, I'd like the "+S[0]+" sample cards. My address is: ");}
     }
     tabs.forEach(function(b,i){
       b.addEventListener('click',function(){show(b);});
@@ -381,31 +422,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
 
 <div class="h-rule"></div>
 
-<section id="possibility">
-  <div class="possibility-grid">
-    <div style="display:flex;flex-direction:column;gap:0;overflow:hidden;box-shadow:0 20px 50px rgba(26,22,20,.2);">
-      <div style="display:flex;height:14px;width:100%;flex-shrink:0;">
-       <span style="flex:1;background:#B0B8C3;"></span>
-        <span style="flex:1;background:linear-gradient(90deg,#BEA17F 0 33%,#AC8F6E 33% 66%,#997C5D 66%);"></span>
-        <span style="flex:1;background:#4E5544;"></span>
-      </div>
-      <div style="display:flex;padding:0.55rem 0.9rem 0.6rem;background:var(--light);flex-shrink:0;">
-        <span style="flex:1;font-family:'Jost',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--charcoal);">Low Cloud</span>
-        <span style="flex:1;font-family:'Jost',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--charcoal);">Dry Gold</span>
-        <span style="flex:1;font-family:'Jost',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--charcoal);">Treeline</span>
-      </div>
-      <img src="https://res.cloudinary.com/dgar566f/image/upload/c_crop,g_east,w_0.97/f_auto,q_auto,w_900/v1791632841/02-bright-day-the-room_pvt35n.png" alt="Sunlit living room with warm straw walls — Dry Gold brought inside" loading="lazy" style="width:100%;display:block;height:420px;object-fit:cover;object-position:center 40%;">
-    </div>
-    <div>
-      <div class="possibility-eyebrow">Your area's colours</div>
-      <h2 class="possibility-title">The field, <em>brought in.</em></h2>
-      <p class="possibility-text"><strong style="font-weight:500;">Low Cloud</strong> · the soft grey over the Flats. For the ceiling.</p>
-      <p class="possibility-text"><strong style="font-weight:500;">Dry Gold</strong> · the grass, from pale straw to its deepest tone. For the walls.</p>
-      <p class="possibility-text"><strong style="font-weight:500;">Treeline</strong> · the dark edge of trees. For doors, dado and skirting.</p>
-      <p class="journal-link"><a href="/journal/where-you-are.html">Read the journal: Where you are is who you are</a></p>
-    </div>
-  </div>
-</section>
+
 
 <div class="h-rule"></div>
 <!-- ═══ END THREE MOMENTS ═══ -->
@@ -418,41 +435,47 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
   <div class="depth-grid ways-grid">
     <div class="depth-card">
       <div class="way-head"><div class="depth-name">See it</div><div class="tier-price">Free</div></div>
-      <div class="tier-scope">Your area's colours on this page, or a free 20-minute visit if you're near the Flats. I'll look at the room and the light, and tell you what I'd do.</div>
+      <div class="tier-scope">A free 20-minute home visit. I find which moment each room catches, and tell you what I'd do.</div>
     </div>
     <div class="depth-card">
       <div class="way-head"><div class="depth-name">Try it</div><div class="tier-price">£15</div></div>
-      <div class="tier-scope">Three hand-painted cards, one for each moment of your season, to live with for a week. Sent within 5 working days. Credited if you book.</div>
+      <div class="tier-scope">Three hand-painted cards, one for each moment of your season. Sent within 5 working days. Credited if you book.</div>
     </div>
     <div class="depth-card">
       <div class="way-head"><div class="depth-name">Plan it</div><div class="tier-price">£100 <span style="font-size:.85rem;opacity:.8;font-style:italic">intro price</span></div></div>
-      <div class="tier-scope">A home visit and a written room-by-room colour plan. Paint it yourself, or have me paint it. Credited if you book within 60 days.</div>
+      <div class="tier-scope">A written room-by-room plan: the moment each room holds, and the paints that match it. Credited if you book within 60 days.</div>
     </div>
     <div class="depth-card">
       <div class="way-head"><div class="depth-name">Have it done</div><div class="tier-price">From £190</div></div>
-      <div class="tier-scope">Paint, wallpaper and special finishes, done by me, for homes and businesses. Not tied to one paint brand.</div>
+      <div class="tier-scope">Paint, wallpaper and special finishes, done by me. Including the Turning Wall: one wall that holds the moment the season turns.</div>
     </div>
   </div>
 
-  <p class="finish-line">Paint, wallpaper, clay paint, limewash or mural. All in your area's colours.</p>
-  <p class="finish-note">Materials are quoted separately. Limewash and murals are quoted once I've seen the wall.</p>
-
-  <div class="dark-box">
-    <div class="dark-box__k">Dark room? <em>White isn't the answer.</em></div>
-    <p>White goes grey in low light. A warm colour from the area, carried across walls, ceiling and woodwork, makes a small room feel snug instead of gloomy. You don't need a view. The feel of the area is enough.</p>
-  </div>
+  <p class="finish-note" style="margin-top:2rem;">Materials quoted separately. Special finishes quoted once I've seen the wall.</p>
 </section>
 
-<!-- COMMERCIAL STRIP -->
-<section style="background:var(--ink);padding:2.5rem 1.5rem;text-align:center;margin-top:0;border-top:1px solid rgba(240,181,96,.2);">
-  <div style="font-family:'Jost',sans-serif;font-size:0.85rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Running a business in the neighbourhood?</div>
-  <p style="font-family:'EB Garamond',serif;font-size:1.35rem;font-style:italic;color:#F5EFE6;max-width:40ch;margin:0 auto 1rem;line-height:1.45;">From £190 · Your brand colours, or the area's · Specified for your space, not your home.</p>
-  <p style="font-family:'Jost',sans-serif;font-size:1rem;color:rgba(245,239,230,0.85);letter-spacing:0.5px;margin:0 auto 1.6rem;line-height:1.6;">Cafés · salons · yoga studios · wellness · boutique hotels · guest houses · short lets</p>
-  <a href="https://wa.me/442031431725?text=Hi%20Akram%2C%20I%27d%20like%20to%20enquire%20about%20commercial%20decorating%20near%20Wanstead%20Flats"
-     target="_blank"
-     style="display:inline-block;font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:0.9rem 1.8rem;text-decoration:none;">
-    Enquire on WhatsApp
-  </a>
+<!-- ═══ FOR BUSINESSES ═══ -->
+<section id="business" style="background:var(--ink);padding:4rem 6vw;border-top:1px solid rgba(240,181,96,.2);color:#F5EFE6;">
+  <div style="max-width:1000px;margin:0 auto;text-align:center;">
+    <div style="font-family:'Jost',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">For cafés, salons and studios</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,4vw,2.9rem);line-height:1.15;margin:0 0 .8rem;">Your customers come <em style="color:var(--gold);">at an hour.</em></h2>
+    <p style="font-family:'EB Garamond',serif;font-size:1.25rem;line-height:1.6;color:rgba(245,239,230,.88);max-width:44ch;margin:0 auto 2.5rem;">A business has its busiest moment. The room should be at its best then.</p>
+    <div class="biz-grid">
+      <div class="biz-card"><b>Morning trade</b><span>Cafés, bakeries, breakfast spots.</span><p>A room that wakes people up gently.</p></div>
+      <div class="biz-card"><b>Afternoon trade</b><span>Salons, clinics, wellness studios.</span><p>A room that holds calm through the long middle of the day.</p></div>
+      <div class="biz-card"><b>Evening trade</b><span>Restaurants, yoga studios, guest houses, short lets.</span><p>A room that settles people as the light goes.</p></div>
+    </div>
+    <p style="font-family:'EB Garamond',serif;font-size:1.2rem;font-style:italic;line-height:1.55;color:#F5EFE6;max-width:46ch;margin:2.5rem auto 1.6rem;">Your brand colours, or the area's, set to the season and the hour your customers come. From £190.</p>
+    <a href="https://wa.me/442031431725?text=Hi%20Akram%2C%20I%27d%20like%20to%20enquire%20about%20decorating%20my%20business%20near%20Wanstead%20Flats" target="_blank" class="btn-gold">Enquire on WhatsApp</a>
+  </div>
+  <style>
+    .biz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;text-align:left}
+    .biz-card{border:1px solid rgba(240,181,96,.35);padding:1.5rem 1.4rem;display:grid;gap:.5rem;align-content:start}
+    .biz-card b{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.7rem;line-height:1.1;color:#F5EFE6}
+    .biz-card span{font-family:'Jost',sans-serif;font-size:.92rem;letter-spacing:.3px;color:var(--gold);line-height:1.5}
+    .biz-card p{font-family:'EB Garamond',serif;font-size:1.1rem;line-height:1.55;color:rgba(245,239,230,.85);margin:0}
+    @media(max-width:800px){.biz-grid{grid-template-columns:1fr}}
+  </style>
 </section>
 
 <div class="h-rule"></div>
@@ -517,7 +540,8 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
   <div class="footer-address">
     Akram Khan · View &amp; Vibe Led Decorator · Dulux Select member since 2005<br>
     Suite RA01, 195–197 Wood Street, London E17 3NU<br>
-    horizonandhue.co.uk · hello@horizonandhue.co.uk · 020 3143 1725
+    horizonandhue.co.uk · hello@horizonandhue.co.uk · 020 3143 1725<br>
+    <a href="/terms.html" style="color:inherit;">Terms and privacy</a>
   </div>
 </footer>
 
