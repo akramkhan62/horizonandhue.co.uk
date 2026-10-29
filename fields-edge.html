@@ -39,8 +39,8 @@ section{padding:6rem 5vw}
 .section-body{font-family:'EB Garamond',serif;font-size:1.2rem;color:var(--charcoal);line-height:1.9;max-width:65ch;}
 
 #locale-hero{position:relative;height:78vh;min-height:480px;overflow:hidden;background:var(--ink);padding:0;}
-#locale-hero img{width:100%;height:100%;object-fit:cover;display:block;opacity:.9;}
-.locale-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,47,51,.3) 0%,rgba(28,47,51,.1) 40%,rgba(28,47,51,.8) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:3rem 5vw;}
+#locale-hero img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block;opacity:1;}
+.locale-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,47,51,0) 65%,rgba(28,47,51,.25) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:3rem 5vw;}.hero-box{align-self:flex-start;max-width:470px;background:rgba(28,47,51,.62);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:2rem 2.4rem 2.2rem;display:flex;flex-direction:column}.hero-box .btn-gold{align-self:flex-start}.hero-box .locale-hero-title{font-size:clamp(2.4rem,3.6vw,3.4rem)!important;line-height:1.05}.hero-box .locale-hero-sense{font-size:1.3rem!important;line-height:1.45}@media(max-width:700px){.hero-box{max-width:none;align-self:stretch;padding:1.5rem 1.3rem 1.6rem}}
 .locale-hero-eyebrow{font-family:'Jost',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
 .locale-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5.5vw,4.75rem);font-weight:300;line-height:1.05;color:var(--cream);margin-bottom:.75rem;}
 .locale-hero-title em{color:var(--gold);font-style:italic;}
@@ -113,7 +113,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
 .footer-address a{color:rgba(245,239,230,.6);text-decoration:none;}
 
 @media(max-width:900px){.reading-grid{grid-template-columns:1fr}.possibility-grid{grid-template-columns:1fr}.depth-grid{grid-template-columns:1fr}}
-@media(max-width:600px){section{padding:4rem 6vw}#possibility{padding-top:3rem}.locale-hero-overlay{padding:2.5rem 6vw}.thread-row{gap:1rem}.thread-swatch{width:100px}.thread-swatch-block{height:100px}}
+@media(max-width:600px){section{padding:4rem 6vw}#possibility{padding-top:3rem}.locale-hero-overlay{padding:2.5rem 6vw}@media(max-width:700px){.locale-hero-overlay{background:none!important}#locale-hero img{object-position:42% 50%!important}}.thread-row{gap:1rem}.thread-swatch{width:100px}.thread-swatch-block{height:100px}}
 
 /* simplified page additions */
 #locale-cta .cta-sub{font-style:normal;font-size:1.15rem;margin-bottom:1.5rem;}
@@ -154,13 +154,15 @@ footer{background:var(--ink);border-top:1px solid rgba(201,151,76,.15);padding:2
 </nav>
 
 <section id="locale-hero">
-  <img src="https://res.cloudinary.com/dgar566f/image/upload/f_auto,q_auto,w_1600/v1789383916/fields_edge_hero_FINAL_xmmg39.jpg" alt="Open dry grass and a path across Wanstead Flats under a low sky">
+  <img src="fields-edge-hero-1920.jpg" srcset="fields-edge-hero-1280.jpg 1280w, fields-edge-hero-1920.jpg 1920w, fields-edge-hero.jpg 2560w" sizes="100vw" alt="Open gold grassland on Wanstead Flats under a cloudy London sky">
   <div class="locale-hero-overlay">
+    <div class="hero-box">
     <div class="locale-hero-eyebrow">Fields &amp; open ground</div>
  <h1 class="locale-hero-title">Open. <em>Gold.</em> Windswept.</h1>
      <p class="locale-hero-sense" style="font-size:clamp(1.35rem,2.4vw,1.9rem);color:var(--cream);">Stop guessing colours. Your area already chose them.</p>
     <p style="font-family:'Jost',sans-serif;font-size:.8rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:rgba(245,239,230,.85);margin-top:.9rem;">Wanstead Flats · Leyton Flats · Hackney Marshes</p>
     <a class="btn-gold" style="margin-top:1.4rem;align-self:flex-start;" href="https://wa.me/442031431725?text=Hi%20Akram%2C%20I%27d%20like%20to%20book%20a%20free%20home%20visit%20near%20Wanstead%20Flats" target="_blank">Book a free home visit</a>
+  </div>
   </div>
 </section>
 
